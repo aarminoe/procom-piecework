@@ -1,10 +1,10 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
 function NavBar() {
     return (
         <div>
-            navbar
+            <Link to="/history">history</Link>
         </div>
     )
 }

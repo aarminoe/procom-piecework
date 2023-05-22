@@ -4,6 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 function NavBar() {
     return (
         <div>
+            <Link to="/">Home</Link>
             <Link to="/history">history</Link>
         </div>
     )

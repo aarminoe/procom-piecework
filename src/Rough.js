@@ -1,12 +1,11 @@
 import React from "react";
 
-function Home() {
+function Rough() {
     return(
         <div>
-            Home
-            
+            rough page
         </div>
     )
 }
 
-export default Home
+export default Rough

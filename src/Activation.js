@@ -1,12 +1,11 @@
 import React from "react";
 
-function Home() {
+function Activation() {
     return(
         <div>
-            Home
-            
+            activation page
         </div>
     )
 }
 
-export default Home
+export default Activation

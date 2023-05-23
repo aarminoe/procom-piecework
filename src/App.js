@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import History from './History';
 import NavBar from './NavBar';
 import Home from './Home';
+import Rough from './Rough';
+import Trim from './Trim';
+import Activation from './Activation';
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/history" element={ <History />}/>
+
       </Routes>
     </div>
   );

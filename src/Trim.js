@@ -1,12 +1,11 @@
 import React from "react";
 
-function Home() {
+function Trim() {
     return(
         <div>
-            Home
-            
+            trim page
         </div>
     )
 }
 
-export default Home
+export default Trim

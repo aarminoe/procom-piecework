@@ -6,6 +6,9 @@ function NavBar() {
         <div>
             <Link to="/">Home</Link>
             <Link to="/history">history</Link>
+            <Link to="/rough">Rough</Link>
+            <Link to='/trim'>Trim</Link>
+            <Link to='/activation'>Activation</Link>
         </div>
     )
 }

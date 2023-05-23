@@ -14,7 +14,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/history" element={ <History />}/>
-
+        <Route path='/rough' element={ <Rough /> }/>
+        <Route path='/trim' element={ <Trim />}/>
+        <Route path='/activation' element={ <Activation />}/>
       </Routes>
     </div>
   );

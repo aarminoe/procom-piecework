@@ -6,11 +6,16 @@ import Home from './Home';
 import Rough from './Rough';
 import Trim from './Trim';
 import Activation from './Activation';
+import Login from './Login';
+import { Account } from './Account';
 
 function App() {
   return (
     <div className="App">
       <h1><NavBar /></h1>
+      <Account>
+        <Login />
+      </Account>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/history" element={ <History />}/>

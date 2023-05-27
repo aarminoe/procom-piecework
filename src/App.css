@@ -45,7 +45,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   outline: solid;
   outline-width: 1px;
   margin-top: 20px;

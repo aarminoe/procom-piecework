@@ -75,16 +75,27 @@ function Rough() {
                 </div>
             </div>
             <div class='nested'>
-                roguh
+                QUANTITY
+                SOLD                                                     
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
+                <div class='nested'>___</div>
             </div>
             <div class='nested'>
-                roguh
+                INSTALLED
             </div>
             <div class='nested'>
-                roguh
+                COST
             </div>
             <div class='nested'>
-                roguh
+                TOTAL
             </div>
         </div>
     )

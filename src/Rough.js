@@ -4,9 +4,15 @@ function Rough() {
     return(
         <div class="chart">
             <div class="bar">
-                Rough
-                <div class="bar">Rough</div>
-                <div class="bar">Rough</div>
+                <div class='bar-nested'>
+                    nestemes
+                </div>
+                <div class='bar-nested'>
+                    rough
+                </div>
+            </div>
+            <div class='bar'>
+                roguh
             </div>
         </div>
     )

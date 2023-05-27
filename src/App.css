@@ -43,33 +43,17 @@ body {
   margin: 0;
 }
 
-.chart {
-  width: 95%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box; 
-  margin-left: auto;
-  margin-right: auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  outline: solid;
+  outline-width: 1px;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.bar {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+.nested {
   outline: solid;
   outline-width: 1px;
-  text-align: left;
-}
-
-.bar-nested {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  outline: solid;
-  outline-width: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
 }

@@ -2,16 +2,22 @@ import React from "react";
 
 function Rough() {
     return(
-        <div class="chart">
-            <div class="bar">
-                <div class='bar-nested'>
+        <div class="grid-container">
+            <div >
+                <div class='nested'>
                     nestemes
                 </div>
-                <div class='bar-nested'>
+                <div class='nested'>
                     rough
                 </div>
+                <div class='nested'>
+                    1
+                </div>
+                <div class='nested'>
+                    2
+                </div>
             </div>
-            <div class='bar'>
+            <div class='nested'>
                 roguh
             </div>
         </div>

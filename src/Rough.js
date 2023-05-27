@@ -8,64 +8,70 @@ function Rough() {
                     STRUCTURED WIRING - ROUGH-IN DESCRIPTION
                 </div>
                 <div class='nested'>
-                    rough
+                    Termination of Cat5/6, RG6 keystone
                 </div>
                 <div class='nested'>
-                    1
+                    Terminating LV Enclosure up to 12 wires
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating LV Enclosure up to 25 wires
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating LV Enclosure up to 50 wires
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating door contact
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating other alarm devices
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating alarm panel
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating zone expander (8-zone)
                 </div>
                 <div class='nested'>
-                    2
+                    Outdoor speakers installation (pair)
                 </div>
                 <div class='nested'>
-                    2
+                    Digital Audio System
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating 5.1-2 Surround (ceiling/wall)
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating 7.1-2 Surround (ceiling/wall)
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating Surround Plate
                 </div>
                 <div class='nested'>
-                    2
+                    Terminating Audio Keypad/VC/Source/TP
                 </div>
                 <div class='nested'>
-                    2
+                    Camera Installation & Positioning (per camera)
                 </div>
                 <div class='nested'>
-                    2
+                    NVR/DVR Trim & Installation
                 </div>
                 <div class='nested'>
-                    2
+                    Network Device Installation
                 </div>
                 <div class='nested'>
-                    2
+                    Network Switch Trim up to 8Port
                 </div>
                 <div class='nested'>
-                    2
+                    Network Switch Trim up to 16Port
                 </div>
                 <div class='nested'>
-                    2
+                    Network Switch Trim up to 24Port
+                </div>
+                <div class='nested'>
+                    Vacuum Trim (outlets)
+                </div>
+                <div class='nested'>
+                    Vacuum Trim Unit
                 </div>
             </div>
             <div class='nested'>

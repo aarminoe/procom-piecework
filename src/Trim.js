@@ -84,6 +84,62 @@ function Trim() {
                 </div>
             </div>
             <div class='nested'>
+                SOLD
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+            </div>
+            <div class='nested'>
+                INSTALLED
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+            </div>
+            <div class='nested'>
                 COST
                 <div class='nested'>$3.00</div>
                 <div class='nested'>$3.00</div>
@@ -110,6 +166,34 @@ function Trim() {
                 <div class='nested'>$80.00</div>
                 <div class='nested'>$10.00</div>
                 <div class='nested'>$55.00</div>
+            </div>
+            <div class='nested'>
+                TOTAL
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
             </div>
         </div>
     )

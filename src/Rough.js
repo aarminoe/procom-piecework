@@ -8,70 +8,64 @@ function Rough() {
                     STRUCTURED WIRING - ROUGH-IN DESCRIPTION
                 </div>
                 <div class='nested'>
-                    Termination of Cat5/6, RG6 keystone
+                    Cat5/6, RG6 Wire Drop
                 </div>
                 <div class='nested'>
-                    Terminating LV Enclosure up to 12 wires
+                    Structural Panel Installation
                 </div>
                 <div class='nested'>
-                    Terminating LV Enclosure up to 25 wires
+                    Distribution Prewire Option 1
                 </div>
                 <div class='nested'>
-                    Terminating LV Enclosure up to 50 wires
+                    Distribution Prewire Option 2
                 </div>
                 <div class='nested'>
-                    Terminating door contact
+                    Distribution Prewire Option 3
                 </div>
                 <div class='nested'>
-                    Terminating other alarm devices
+                    Alarm Wire Prewire
                 </div>
                 <div class='nested'>
-                    Terminating alarm panel
+                    Alarm Door Contact Prewire
                 </div>
                 <div class='nested'>
-                    Terminating zone expander (8-zone)
+                    Audio Distribution Per Zone (Pair) Prewire
                 </div>
                 <div class='nested'>
-                    Outdoor speakers installation (pair)
+                    Local/Global Audio Source
                 </div>
                 <div class='nested'>
-                    Digital Audio System
+                    5.1-2 Surround Prewire
                 </div>
                 <div class='nested'>
-                    Terminating 5.1-2 Surround (ceiling/wall)
+                    7.1-2 Surround Prewire
                 </div>
                 <div class='nested'>
-                    Terminating 7.1-2 Surround (ceiling/wall)
+                    CCTV Prewire (Cat5/6) Prewire
                 </div>
                 <div class='nested'>
-                    Terminating Surround Plate
+                    FPPW - Same Stud Bay (Up To 10') - HDMI, (1) RG6, (2) CAT5e
                 </div>
                 <div class='nested'>
-                    Terminating Audio Keypad/VC/Source/TP
+                    FPPW - Same Wall (up to 35') - HDMI, (1) RG6, (2) CAT5e
                 </div>
                 <div class='nested'>
-                    Camera Installation & Positioning (per camera)
+                    FPPW - Same Room (Up To 50') - HDMI, (1) RG6, (2) CAT5e
                 </div>
                 <div class='nested'>
-                    NVR/DVR Trim & Installation
+                    FPPW - Remote (Over 50') - (1) HD Balun Set, (1) RG6, (3) CAT5e
                 </div>
                 <div class='nested'>
-                    Network Device Installation
+                    Additional HDMI (Up To 50")
                 </div>
                 <div class='nested'>
-                    Network Switch Trim up to 8Port
+                    Vacuum Rough (Per Outlet) - Rough
                 </div>
                 <div class='nested'>
-                    Network Switch Trim up to 16Port
+                    Chase Pipe - Attic
                 </div>
                 <div class='nested'>
-                    Network Switch Trim up to 24Port
-                </div>
-                <div class='nested'>
-                    Vacuum Trim (outlets)
-                </div>
-                <div class='nested'>
-                    Vacuum Trim Unit
+                    Chase Pipe - Local
                 </div>
             </div>
             <div class='nested'>
@@ -96,13 +90,9 @@ function Rough() {
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
             </div>
             <div class='nested'>
                 INSTALLED
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>
@@ -150,8 +140,6 @@ function Rough() {
             </div>
             <div class='nested'>
                 TOTAL
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>
                 <div class='nested'>___</div>

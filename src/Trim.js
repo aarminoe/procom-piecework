@@ -5,7 +5,7 @@ function Trim() {
         <div class='grid-container'>
             <div >
                 <div class='nested'>
-                    STRUCTURED WIRING - ROUGH-IN DESCRIPTION
+                    STRUCTURED WIRING - TRIM DESCRIPTION
                 </div>
                 <div class='nested'>
                     Termination of Cat5/6, RG6 keystone

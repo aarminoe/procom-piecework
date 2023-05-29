@@ -69,50 +69,50 @@ function Rough() {
                 </div>
             </div>
             <div class='nested'>
-                SOLD                                                     
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
+                SOLD
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
             </div>
             <div class='nested'>
                 INSTALLED
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
             </div>
             <div class='nested'>
                 COST
@@ -140,26 +140,26 @@ function Rough() {
             </div>
             <div class='nested'>
                 TOTAL
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
-                <div class='nested'>___</div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
             </div>
         </div>
     )

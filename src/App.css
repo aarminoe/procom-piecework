@@ -56,4 +56,13 @@ body {
 .nested {
   outline: solid;
   outline-width: 1px;
+  position: relative;
+}
+
+.nested-input {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 0;
+  vertical-align: top;
 }

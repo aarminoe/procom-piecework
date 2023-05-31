@@ -121,6 +121,12 @@ function Activation() {
                 <div class='nested'>
                     111106
                 </div>
+                <div class='nested'>
+                    -
+                </div>
+                <div class='nested'>
+                    -
+                </div>
             </div>
             <div class='nested'>
                 DESCRIPTION
@@ -162,10 +168,13 @@ function Activation() {
                 <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
+
             </div>
             <div class='nested'>
                 ACTIVATION
-                <div class='nested'>$80.00</div>
+                <div class='nested'>$100.00</div>
                 <div class='nested'>$100.00 w/ Doorbell</div>
                 <div class='nested'>$75.00</div>
                 <div class='nested'>$25.00</div>
@@ -187,10 +196,10 @@ function Activation() {
                 <div class='nested'>$80.00</div>
                 <div class='nested'>$80.00</div>
                 <div class='nested'>$50.00</div>
-                <div class='nested'>$80.00</div>
-                <div class='nested'>$80.00</div>
-                <div class='nested'>$80.00</div>
-                <div class='nested'>$80.00</div>
+                <div class='nested'>$100.00</div>
+                <div class='nested'>$100.00</div>
+                <div class='nested'>$100.00</div>
+                <div class='nested'>$100.00</div>
                 <div class='nested'>$75.00</div>
                 <div class='nested'>$30.00</div>
                 <div class='nested'>$30.00</div>
@@ -203,6 +212,8 @@ function Activation() {
                 <div class='nested'>$30.00</div>
                 <div class='nested'>$80.00</div>
                 <div class='nested'>$80.00</div>
+                <div class='nested'>$55.00</div>
+                <div class='nested'>$25.00</div>
             </div>
             <div class='nested'>
                 STAND ALONE ACTIVATION
@@ -244,9 +255,13 @@ function Activation() {
                 <div class='nested'>$50.00</div>
                 <div class='nested'>$100.00</div>
                 <div class='nested'>$100.00</div>
+                <div class='nested'>-</div>
+                <div class='nested'>-</div>
             </div>
             <div class='nested'>
                 TOTAL
+                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>

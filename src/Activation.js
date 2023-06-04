@@ -15,7 +15,7 @@ function Activation() {
                 Time Out
                 <input />
             </div>
-            <div class='grid-container'>
+            <div class='grid-container-activ'>
                 <div >
                     <div class='nested'>
                         CODE
@@ -188,7 +188,7 @@ function Activation() {
                 <div class='nested'>
                     ACTIVATION
                     <div class='nested'>$100.00</div>
-                    <div class='nested'>$100.00 w/ Doorbell</div>
+                    <div class='nested'>$100.00</div>
                     <div class='nested'>$75.00</div>
                     <div class='nested'>$25.00</div>
                     <div class='nested'>$10.00</div>
@@ -229,7 +229,7 @@ function Activation() {
                     <div class='nested'>$25.00</div>
                 </div>
                 <div class='nested'>
-                    STAND ALONE ACTIVATION
+                    ALONE ACTIVATION
                     <div class='nested'>-</div>
                     <div class='nested'>-</div>
                     <div class='nested'>-</div>

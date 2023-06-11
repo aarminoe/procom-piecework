@@ -1,6 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import { useActivationState } from "./activationState";
 
 function Activation() {
+
+    const {
+        n100502, setN100502,
+        n102501,setN102501,
+        n102520, setN102520,
+        n102523, setN102523,
+        n102526, setN102526,
+        n102528, setN102528,
+        n102532, setN102532,
+        n102534, setN102534,
+        n102542, setN102542,
+        n102543, setN102543,
+        n102590, setN102590,
+        n102592, setN102592,
+        n102593, setN102593,
+        n102595, setN102595,
+        n103101, setN103101,
+        n104461, setN104461,
+        n104462, setN104462,
+        n104463, setN104463,
+        n104464, setN104464,
+        n104465, setN104465,
+        n107101, setN107101,
+        n108806, setN108806,
+        n108806Two, setN108806Two,
+        n108807, setN108807,
+        n108807Two, setN108807Two,
+        n108201, setN108201,
+        n109905, setN109905,
+        n109917, setN109917,
+        n109918, setN109918,
+        n110011, setN110011,
+        n110021, setN110021,
+        n111115, setN111115,
+        n111123, setN111123,
+        n111101, setN111101,
+        n111102, setN111102,
+        n111105, setN111105,
+        n111106, setN111106,
+        tvWallmount, setTvWallmount,
+        soundbarWallmount, setSoundbarWallmount
+      } = useActivationState()
+
     return(
         <div>
             <div>
@@ -273,7 +317,7 @@ function Activation() {
                 </div>
                 <div class='nested'>
                     TOTAL
-                    <div class='nested'><input class='nested-input'/></div>
+                    <div class='nested' onChange={}><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useActivationState } from "./activationState";
 
 function Activation() {
+    
 
     const {
         n100502, setN100502,
@@ -317,13 +318,13 @@ function Activation() {
                 </div>
                 <div class='nested'>
                     TOTAL
-                    <div class='nested' onChange={}><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN100502(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102501(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102520(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102523(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102526(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102528(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102532(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>
                     <div class='nested'><input class='nested-input'/></div>

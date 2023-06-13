@@ -5,8 +5,13 @@ function Activation() {
     
 
     const {
+        tech, setTech,
+        date, setDate,
+        timeIn, setTimeIn,
+        timeOut, setTimeOut,
+        job, setJob,
         n100502, setN100502,
-        n102501,setN102501,
+        n102501, setN102501,
         n102520, setN102520,
         n102523, setN102523,
         n102526, setN102526,
@@ -44,21 +49,43 @@ function Activation() {
         n111106, setN111106,
         tvWallmount, setTvWallmount,
         soundbarWallmount, setSoundbarWallmount
-      } = useActivationState()
+    } = useActivationState()
+
+    function handleActivationTicket(e) {
+        e.preventDefault()
+        fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
+            method: "PUT",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                tech: tech,
+                date: date,
+                time_in: timeIn,
+                time_out: timeOut,
+                job: job,
+                n100502: n100502 != '' ? n100502 : null,
+                n102501: n102501 != '' ? n102501 : null,
+
+            })
+          })
+          .then(res => res.json())
+          .then(data => console.log(data))
+    }
 
     return(
         <div>
             <div>
                 Job
-                <input></input>
+                <input onChange={(e) => setJob(e.target.value)}></input>
                 Date
-                <input />
+                <input onChange={(e) => setDate(e.target.value)} />
                 Technician
-                <input />
+                <input onChange={(e) => setTech(e.target.value)}/>
                 Time In
-                <input />
+                <input onChange={(e) => setTimeIn(e.target.value)}/>
                 Time Out
-                <input />
+                <input onChange={(e) => setTimeOut(e.target.value)}/>
             </div>
             <div class='grid-container-activ'>
                 <div >
@@ -316,7 +343,8 @@ function Activation() {
                     <div class='nested'>-</div>
                     <div class='nested'>-</div>
                 </div>
-                <div class='nested'>
+                <form onSubmit={handleActivationTicket} class='nested'>
+                    <button>Submit</button>
                     TOTAL
                     <div class='nested' onChange={(e) => setN100502(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setN100502(e.target.value)}>-<input class='nested-input'/></div>
@@ -358,7 +386,8 @@ function Activation() {
                     <div class='nested' onChange={(e) => setN111106(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setTvWallmount(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setSoundbarWallmount(e.target.value)}><input class='nested-input'/></div>
-                </div>
+                    
+                </form>
             </div>
         </div>
     )

@@ -1,16 +1,17 @@
 import { useState } from 'react';
 
 export const useAppState = () => {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
-  const [isDisabled, setIsDisabled] = useState(false);
+    const [tech, setTech] = useState('')
+    const [date, setDate] = useState('')
+    const [timeIn, setTimeIn] = useState('')
+    const [timeOut, setTimeOut] = useState('')
+    const [job, setJob] = useState('')
 
   return {
-    count,
-    setCount,
-    name,
-    setName,
-    isDisabled,
-    setIsDisabled,
+    tech, setTech,
+    date, setDate,
+    timeIn, setTimeIn,
+    timeOut, setTimeOut,
+    job, setJob
   };
 };

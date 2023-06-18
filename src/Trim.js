@@ -1,6 +1,38 @@
 import React from "react";
+import { useState } from "react";
 
 function Trim() {
+
+    const [tech, setTech] = useState('')
+    const [date, setDate] = useState('')
+    const [timeIn, setTimeIn] = useState('')
+    const [timeOut, setTimeOut] = useState('')
+    const [job, setJob] = useState('')
+    const [termWire, setTermWire] = useState('')
+    const [blank, setBlank] = useState('')
+    const [panelTo12, setPanelTo12] = useState('')
+    const [panelTo25, setPanelTo25] = useState('')
+    const [panelTo50, setPanelTo50] = useState('')
+    const [doorContact, setDoorContact] = useState('')
+    const [otherAlarms, setOtherAlarms] = useState('')
+    const [zoneExpander, setZoneExpander] = useState('')
+    const [spkrWBrackets, setSpkrWBrackets] = useState('')
+    const [spkrNoBracket, setSpkrNoBracket] = useState('')
+    const [outdoorSpkr, setOutdoorSpkr] = useState('')
+    const [digitalAudio, setDigitalAudio] = useState('')
+    const [surround51, setSurround51] = useState('')
+    const [surround71, setSurround71] = useState('')
+    const [surroundPlate, setSurroundPlate] = useState('')
+    const [audioKPVC, setAudioKPVC] = useState('')
+    const [camInstall, setCamInstall] = useState('')
+    const [nvrDVR, SetNVRDVR] = useState('')
+    const [networkDevice, setNetworkDevice] = useState('')
+    const [switch8, setSwitch8] = useState('')
+    const [switch16, setSwitch16] = useState('')
+    const [switch24, setSwitch24] = useState('')
+    const [vacOutlets, setVacOutlets] = useState('')
+    const [vacUnit, setVacUnit] = useState('')
+
     return(
         <div class='grid-container'>
             <div >

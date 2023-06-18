@@ -15,6 +15,7 @@ function Trim() {
     const [panelTo50, setPanelTo50] = useState('')
     const [doorContact, setDoorContact] = useState('')
     const [otherAlarms, setOtherAlarms] = useState('')
+    const [alarmPanel, setAlarmPanel] = useState('')
     const [zoneExpander, setZoneExpander] = useState('')
     const [spkrWBrackets, setSpkrWBrackets] = useState('')
     const [spkrNoBracket, setSpkrNoBracket] = useState('')
@@ -145,31 +146,31 @@ function Trim() {
             </div>
             <div class='nested'>
                 INSTALLED
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setTermWire(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setBlank(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo12(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo25(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo50(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setDoorContact(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setOtherAlarms(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setAlarmPanel(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setZoneExpander(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSpkrWBrackets(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSpkrNoBracket(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setOutdoorSpkr(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setDigitalAudio(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurround51(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurround71(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurroundPlate(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setAudioKPVC(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setCamInstall(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => SetNVRDVR(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setNetworkDevice(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch8(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch16(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch24(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setVacOutlets(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setVacUnit(e.target.value)}><input class='nested-input'/></div>
             </div>
             <div class='nested'>
                 COST

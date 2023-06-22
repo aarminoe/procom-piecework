@@ -3,6 +3,27 @@ import { useState } from "react";
 
 function Rough() {
 
+    const [wireDrop, setWireDrop] = useState('')
+    const [panelInstall, setPanelInstall] = useState('')
+    const [prewire1, setPrewire1] = useState('')
+    const [prewire2, setPrewire2] = useState('')
+    const [prewire3, setPrewire3] = useState('')
+    const [alarmWire, setAlarmWire] = useState('')
+    const [doorContactWire, setDoorContactWire] = useState('')
+    const [audioZonePrewire, setAudioZonePrewire] = useState('')
+    const [localGlobalAudio, setLocalGlobalAudio] = useState('')
+    const [surround51, setSurround51] = useState('')
+    const [surround71, setSurround71] = useState('')
+    const [CCTVPrewire, setCCTVPrewire] = useState('')
+    const [FPPWSameStud , setFPPWSameStud] = useState('')
+    const [FPPWSameWall, setFPPWSameWall] = useState('')
+    const [FPPWSameRoom, setFPPWSameRoom] = useState('')
+    const [FPPWRemote, setFPPWRemote] = useState('')
+    const [additionalHDMI, setAdditionalHDMI] = useState('')
+    const [vacuumOutlet, setVacuumOutlet] = useState('')
+    const [pipeAttic, setPipeAttic] = useState('')
+    const [pipeLocal, setPipeLocal] = useState('')
+
     
     return(
         <div>

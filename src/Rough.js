@@ -24,6 +24,45 @@ function Rough() {
     const [pipeAttic, setPipeAttic] = useState('')
     const [pipeLocal, setPipeLocal] = useState('')
 
+    function handleActivationTicket(e) {
+        e.preventDefault();
+        fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
+          method: "PUT",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            tech: tech,
+            date: date,
+            time_in: timeIn,
+            time_out: timeOut,
+            job: job,
+            wireDrop: wireDrop !== '' ? wireDrop : null,
+            panelInstall: panelInstall !== '' ? panelInstall : null,
+            prewire1: prewire1 !== '' ? prewire1 : null,
+            prewire2: prewire2 !== '' ? prewire2 : null,
+            prewire3: prewire3 !== '' ? prewire3 : null,
+            alarmWire: alarmWire !== '' ? alarmWire : null,
+            doorContactWire: doorContactWire !== '' ? doorContactWire : null,
+            audioZonePrewire: audioZonePrewire !== '' ? audioZonePrewire : null,
+            localGlobalAudio: localGlobalAudio !== '' ? localGlobalAudio : null,
+            surround51: surround51 !== '' ? surround51 : null,
+            surround71: surround71 !== '' ? surround71 : null,
+            CCTVPrewire: CCTVPrewire !== '' ? CCTVPrewire : null,
+            FPPWSameStud: FPPWSameStud !== '' ? FPPWSameStud : null,
+            FPPWSameWall: FPPWSameWall !== '' ? FPPWSameWall : null,
+            FPPWSameRoom: FPPWSameRoom !== '' ? FPPWSameRoom : null,
+            FPPWRemote: FPPWRemote !== '' ? FPPWRemote : null,
+            additionalHDMI: additionalHDMI !== '' ? additionalHDMI : null,
+            vacuumOutlet: vacuumOutlet !== '' ? vacuumOutlet : null,
+            pipeAttic: pipeAttic !== '' ? pipeAttic : null,
+            pipeLocal: pipeLocal !== '' ? pipeLocal : null,
+          })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
+      }
+      
     
     return(
         <div>

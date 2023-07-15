@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useActivationState } from "./activationState";
+const { v4: uuidv4 } = require('uuid');
+
 
 function Activation() {
-    
 
     const {
         tech, setTech,
@@ -54,13 +55,13 @@ function Activation() {
     function handleActivationTicket(e) {
         e.preventDefault()
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
-            method: "PUT",
+            method: "POST",
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 tech: tech,
-                date: date,
+                date: uuidv4(),
                 time_in: timeIn,
                 time_out: timeOut,
                 job: job,

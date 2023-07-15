@@ -32,7 +32,7 @@ function Rough() {
     function handleRoughTicket(e) {
         e.preventDefault()
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
-          method: "PUT",
+          method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },

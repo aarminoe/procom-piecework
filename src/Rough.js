@@ -29,8 +29,8 @@ function Rough() {
     const [pipeAttic, setPipeAttic] = useState('')
     const [pipeLocal, setPipeLocal] = useState('')
 
-    function handleActivationTicket(e) {
-        e.preventDefault();
+    function handleRoughTicket(e) {
+        e.preventDefault()
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
           method: "PUT",
           headers: {
@@ -226,7 +226,7 @@ function Rough() {
                     <div class='nested'>${panelInstall * 25}</div>
                     <div class='nested'>${prewire1 * 30}</div>
                     <div class='nested'>${prewire2 * 45}</div>
-                    <div class='nested'>${prewire2 * 60}</div>
+                    <div class='nested'>${prewire3 * 60}</div>
                     <div class='nested'>${alarmWire * 15}</div>
                     <div class='nested'>${doorContactWire * 20}</div>
                     <div class='nested'>${audioZonePrewire * 35}</div>
@@ -246,7 +246,7 @@ function Rough() {
                 </div>
             </div>
             <div>
-                <button>Submit</button>
+                <button onClick={handleRoughTicket}>Submit</button>
             </div>
         </div>
     )

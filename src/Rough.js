@@ -222,26 +222,27 @@ function Rough() {
                 </div>
                 <div class='nested'>
                     TOTAL
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
+                    <div class='nested'>${wireDrop * 15}</div>
+                    <div class='nested'>${panelInstall * 25}</div>
+                    <div class='nested'>${prewire1 * 30}</div>
+                    <div class='nested'>${prewire2 * 45}</div>
+                    <div class='nested'>${prewire2 * 60}</div>
+                    <div class='nested'>${alarmWire * 15}</div>
+                    <div class='nested'>${doorContactWire * 20}</div>
+                    <div class='nested'>${audioZonePrewire * 35}</div>
+                    <div class='nested'>${localGlobalAudio * 25}</div>
+                    <div class='nested'>${surround51 * 75}</div>
+                    <div class='nested'>${surround71 * 100}</div>
+                    <div class='nested'>${CCTVPrewire * 20}</div>
+                    <div class='nested'>${FPPWSameStud * 15}</div>
+                    <div class='nested'>${FPPWSameWall * 25}</div>
+                    <div class='nested'>${FPPWSameRoom * 50}</div>
+                    <div class='nested'>${FPPWRemote * 60}</div>
+                    <div class='nested'>${additionalHDMI * 10}</div>
+                    <div class='nested'>${vacuumOutlet * 55}</div>
+                    <div class='nested'>${pipeAttic * 50}</div>
+                    <div class='nested'>${pipeLocal * 30}</div>
+                    <div class='nested'>$0</div>
                 </div>
             </div>
             <div>

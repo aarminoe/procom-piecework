@@ -35,7 +35,22 @@ function Trim() {
     const [vacUnit, setVacUnit] = useState('')
 
     return(
+        <div>
+            <div>
+                Job
+                <input onChange={(e) => setJob(e.target.value)}></input>
+                Date
+                <input onChange={(e) => setDate(e.target.value)} />
+                Technician
+                <input onChange={(e) => setTech(e.target.value)}/>
+                Time In
+                <input onChange={(e) => setTimeIn(e.target.value)}/>
+                Time Out
+                <input onChange={(e) => setTimeOut(e.target.value)}/>
+            </div>
+
         <div class='grid-container'>
+            
             <div >
                 <div class='nested'>
                     STRUCTURED WIRING - TRIM DESCRIPTION
@@ -228,6 +243,7 @@ function Trim() {
                 <div class='nested'><input class='nested-input'/></div>
                 <div class='nested'><input class='nested-input'/></div>
             </div>
+        </div>
         </div>
     )
 }

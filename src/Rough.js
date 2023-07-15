@@ -3,6 +3,11 @@ import { useState } from "react";
 
 function Rough() {
 
+    const [tech, setTech] = useState('')
+    const [timeIn, setTimeIn] = useState('')
+    const [date, setDate] = useState('')
+    const [timeOut, setTimeOut] = useState('')
+    const [job, setJob] = useState('')
     const [wireDrop, setWireDrop] = useState('')
     const [panelInstall, setPanelInstall] = useState('')
     const [prewire1, setPrewire1] = useState('')
@@ -61,11 +66,23 @@ function Rough() {
         })
         .then(res => res.json())
         .then(data => console.log(data));
-      }
+    }
       
     
     return(
         <div>
+            <div>
+                Job
+                <input onChange={(e) => setJob(e.target.value)}></input>
+                Date
+                <input onChange={(e) => setDate(e.target.value)} />
+                Technician
+                <input onChange={(e) => setTech(e.target.value)}/>
+                Time In
+                <input onChange={(e) => setTimeIn(e.target.value)}/>
+                Time Out
+                <input onChange={(e) => setTimeOut(e.target.value)}/>
+            </div>
 
             <div class="grid-container">
                 <div >

@@ -175,26 +175,26 @@ function Rough() {
                 </div>
                 <div class='nested'>
                     INSTALLED
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
-                    <div class='nested'><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setWireDrop(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPanelInstall(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPrewire1(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPrewire2(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPrewire3(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setAlarmWire(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setDoorContactWire(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setAudioZonePrewire(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setLocalGlobalAudio(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSurround51(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSurround71(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setCCTVPrewire(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setFPPWSameStud(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setFPPWSameWall(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setFPPWSameRoom(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setFPPWRemote(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setAdditionalHDMI(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setVacuumOutlet(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPipeAttic(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPipeLocal(e.target.value)}><input class='nested-input'/></div>
                 </div>
                 <div class='nested'>
                     COST

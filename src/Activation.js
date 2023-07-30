@@ -54,14 +54,16 @@ function Activation() {
 
     function handleActivationTicket(e) {
         e.preventDefault()
+        if (tech == '') return null
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                tech: tech,
-                date: uuidv4(),
+                aaTech: tech,
+                id: uuidv4(),
+                date: date,
                 time_in: timeIn,
                 time_out: timeOut,
                 job: job,

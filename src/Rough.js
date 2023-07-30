@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+const { v4: uuidv4 } = require('uuid');
 
 function Rough() {
 
@@ -31,13 +32,15 @@ function Rough() {
 
     function handleRoughTicket(e) {
         e.preventDefault()
+        if (tech == '') return "No Tech Found"
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            tech: tech,
+            id: uuidv4(),
+            aaTech: tech,
             date: date,
             time_in: timeIn,
             time_out: timeOut,

@@ -88,7 +88,55 @@ function Trim() {
             (vacUnit * totalVacUnit)
     )
 
+    function handleTrimTicket(e) {
+        e.preventDefault()
+        if (tech == '') return "No Tech Found"
+        fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: uuidv4(),
+            aaTech: tech,
+            date: date,
+            time_in: timeIn,
+            time_out: timeOut,
+            job: job,
+            termWire: termWire !== '' ? termWire : null,
+            blank: blank !== '' ? blank : null,
+            panelTo12: panelTo12 !== '' ? panelTo12 : null,
+            panelTo25: panelTo25 !== '' ? panelTo25 : null,
+            panelTo50: panelTo50 !== '' ? panelTo50 : null,
+            doorContact: doorContact !== '' ? doorContact : null,
+            otherAlarms: otherAlarms !== '' ? otherAlarms : null,
+            alarmPanel: alarmPanel !== '' ? alarmPanel : null,
+            zoneExpander: zoneExpander !== '' ? zoneExpander : null,
+            surround51: surround51 !== '' ? surround51 : null,
+            surround71: surround71 !== '' ? surround71 : null,
+            spkrNoBracket: spkrNoBracket !== '' ? spkrNoBracket : null,
+            spkrWBrackets: spkrWBrackets !== '' ? spkrWBrackets : null,
+            outdoorSpkr: outdoorSpkr !== '' ? outdoorSpkr : null,
+            digitalAudio: digitalAudio !== '' ? digitalAudio : null,
+            surroundPlate: surroundPlate !== '' ? surroundPlate : null,
+            audioKPVC: audioKPVC !== '' ? audioKPVC : null,
+            camInstall: camInstall !== '' ? camInstall : null,
+            nvrDVR: nvrDVR !== '' ? nvrDVR : null,
+            networkDevice: networkDevice !== '' ? networkDevice : null,
+            switch8: switch8 !== '' ? switch8 : null,
+            switch16: switch16 !== '' ? switch16 : null,
+            switch24: switch24 !== '' ? switch24 : null,
+            vacOutlets: vacOutlets !== '' ? vacOutlets : null,
+            vacUnit: vacUnit !== '' ? vacUnit : null,
+          })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
+    }
+      
+
     return(
+        <form onSubmit={handleTrimTicket}>
         <div>
             <div>
                 Job
@@ -300,6 +348,8 @@ function Trim() {
             </div>
         </div>
         </div>
+        <button>Submit</button>
+        </form>
     )
 }
 

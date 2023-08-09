@@ -34,6 +34,59 @@ function Trim() {
     const [switch24, setSwitch24] = useState('')
     const [vacOutlets, setVacOutlets] = useState('')
     const [vacUnit, setVacUnit] = useState('')
+    const [totalTermWire, setTotalTermWire] = useState(3)
+    const [totalBlank, setTotalBlank] = useState(3)
+    const [totalPanelTo12, setTotalPanelTo12] = useState(35)
+    const [totalPanelTo25, setTotalPanelTo25] = useState(70)
+    const [totalPanelTo50, setTotalPanelTo50] = useState(125)
+    const [totalDoorContact, setTotalDoorContact] = useState(20)
+    const [totalOtherAlarms, setTotalOtherAlarms] = useState(15)
+    const [totalAlarmPanel, setTotalAlarmPanel] = useState(60)
+    const [totalZoneExpander, setTotalZoneExpander] = useState(30)
+    const [totalSpkrWBrackets, setTotalSpkrWBrackets] = useState(25)
+    const [totalSpkrNoBracket, setTotalSpkrNoBracket] = useState(45)
+    const [totalOutdoorSpkr, setTotalOutdoorSpkr] = useState(25)
+    const [totalDigitalAudio, setTotalDigitalAudio] = useState(40)
+    const [totalSurround51, setTotalSurround51] = useState(60)
+    const [totalSurround71, setTotalSurround71] = useState(90)
+    const [totalSurroundPlate, setTotalSurroundPlate] = useState(20)
+    const [totalAudioKPVC, setTotalAudioKPVC] = useState(15)
+    const [totalCamInstall, setTotalCamInstall] = useState(30)
+    const [totalNVRDVR, setTotalNVRDVR] = useState(45)
+    const [totalNetworkDevice, setTotalNetworkDevice] = useState(15)
+    const [totalSwitch8, setTotalSwitch8] = useState(30)
+    const [totalSwitch16, setTotalSwitch16] = useState(55)
+    const [totalSwitch24, setTotalSwitch24] = useState(80)
+    const [totalVacOutlets, setTotalVacOutlets] = useState(10)
+    const [totalVacUnit, setTotalVacUnit] = useState(55)
+
+    const toPay = (
+            (termWire * totalTermWire) +
+            (blank * totalBlank) +
+            (panelTo12 * totalPanelTo12) +
+            (panelTo25 * totalPanelTo25) +
+            (panelTo50 * totalPanelTo50) +
+            (doorContact * totalDoorContact) +
+            (otherAlarms * totalOtherAlarms) +
+            (alarmPanel * totalAlarmPanel) +
+            (zoneExpander * totalZoneExpander) +
+            (spkrWBrackets * totalSpkrWBrackets) +
+            (spkrNoBracket * totalSpkrNoBracket) +
+            (outdoorSpkr * totalOutdoorSpkr) +
+            (digitalAudio * totalDigitalAudio) +
+            (surround51 * totalSurround51) +
+            (surround71 * totalSurround71) +
+            (surroundPlate * totalSurroundPlate) +
+            (audioKPVC * totalAudioKPVC) +
+            (camInstall * totalCamInstall) +
+            (nvrDVR * totalNVRDVR) +
+            (networkDevice * totalNetworkDevice) +
+            (switch8 * totalSwitch8) +
+            (switch16 * totalSwitch16) +
+            (switch24 * totalSwitch24) +
+            (vacOutlets * totalVacOutlets) +
+            (vacUnit * totalVacUnit)
+    )
 
     return(
         <div>
@@ -218,31 +271,32 @@ function Trim() {
             </div>
             <div class='nested'>
                 TOTAL
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
-                <div class='nested'><input class='nested-input'/></div>
+                <div class='nested'>${termWire * totalTermWire}</div>
+                <div class='nested'>${blank * totalBlank}</div>
+                <div class='nested'>${panelTo12 * totalPanelTo12}</div>
+                <div class='nested'>${panelTo25 * totalPanelTo25}</div>
+                <div class='nested'>${panelTo50 * totalPanelTo50}</div>
+                <div class='nested'>${doorContact * totalDoorContact}</div>
+                <div class='nested'>${otherAlarms * totalOtherAlarms}</div>
+                <div class='nested'>${alarmPanel * totalAlarmPanel}</div>
+                <div class='nested'>${zoneExpander * totalZoneExpander}</div>
+                <div class='nested'>${spkrWBrackets * totalSpkrWBrackets}</div>
+                <div class='nested'>${spkrNoBracket * totalSpkrNoBracket}</div>
+                <div class='nested'>${outdoorSpkr * totalOutdoorSpkr}</div>
+                <div class='nested'>${digitalAudio * totalDigitalAudio}</div>
+                <div class='nested'>${surround51 * totalSurround51}</div>
+                <div class='nested'>${surround71 * totalSurround71}</div>
+                <div class='nested'>${surroundPlate * totalSurroundPlate}</div>
+                <div class='nested'>${audioKPVC * totalAudioKPVC}</div>
+                <div class='nested'>${camInstall * totalCamInstall}</div>
+                <div class='nested'>${nvrDVR * totalNVRDVR}</div>
+                <div class='nested'>${networkDevice * totalNetworkDevice}</div>
+                <div class='nested'>${switch8 * totalSwitch8}</div>
+                <div class='nested'>${switch16 * totalSwitch16}</div>
+                <div class='nested'>${switch24 * totalSwitch24}</div>
+                <div class='nested'>${vacOutlets * totalVacOutlets}</div>
+                <div class='nested'>${vacUnit * totalVacUnit}</div>
+                <div class='nested'>${toPay}</div>
             </div>
         </div>
         </div>

@@ -45,43 +45,45 @@ export const useActivationState = () => {
   const [n111106, setN111106] = useState('');
   const [tvWallmount, setTvWallmount] = useState('');
   const [soundbarWallmount, setSoundbarWallmount] = useState('');
-  const [totalN100502, setTotalN100502] = useState('');
-  const [totalN102501, setTotalN102501] = useState('');
-  const [totalN102520, setTotalN102520] = useState('');
-  const [totalN102523, setTotalN102523] = useState('');
-  const [totalN102526, setTotalN102526] = useState('');
-  const [totalN102528, setTotalN102528] = useState('');
-  const [totalN102532, setTotalN102532] = useState('');
-  const [totalN102534, setTotalN102534] = useState('');
-  const [totalN102542, setTotalN102542] = useState('');
-  const [totalN102543, setTotalN102543] = useState('');
-  const [totalN102590, setTotalN102590] = useState('');
-  const [totalN102592, setTotalN102592] = useState('');
-  const [totalN102593, setTotalN102593] = useState('');
-  const [totalN102595, setTotalN102595] = useState('');
-  const [totalN103101, setTotalN103101] = useState('');
-  const [totalN104461, setTotalN104461] = useState('');
-  const [totalN104462, setTotalN104462] = useState('');
-  const [totalN104463, setTotalN104463] = useState('');
-  const [totalN104464, setTotalN104464] = useState('');
-  const [totalN104465, setTotalN104465] = useState('');
-  const [totalN107101, setTotalN107101] = useState('');
-  const [totalN108806, setTotalN108806] = useState('');
-  const [totalN108806Two, setTotalN108806Two] = useState('');
-  const [totalN108807, setTotalN108807] = useState('');
-  const [totalN108807Two, setTotalN108807Two] = useState('');
-  const [totalN108201, setTotalN108201] = useState('');
-  const [totalN109905, setTotalN109905] = useState('');
-  const [totalN109917, setTotalN109917] = useState('');
-  const [totalN109918, setTotalN109918] = useState('');
-  const [totalN110011, setTotalN110011] = useState('');
-  const [totalN110021, setTotalN110021] = useState('');
-  const [totalN111115, setTotalN111115] = useState('');
-  const [totalN111123, setTotalN111123] = useState('');
-  const [totalN111101, setTotalN111101] = useState('');
-  const [totalN111102, setTotalN111102] = useState('');
-  const [totalN111105, setTotalN111105] = useState('');
-  const [totalN111106, setTotalN111106] = useState('');
+  const [totalN100502, setTotalN100502] = useState(100);
+  const [totalN102501, setTotalN102501] = useState(75);
+  const [totalN102520, setTotalN102520] = useState(25);
+  const [totalN102523, setTotalN102523] = useState(10);
+  const [totalN102526, setTotalN102526] = useState(15);
+  const [totalN102528, setTotalN102528] = useState(15);
+  const [totalN102532, setTotalN102532] = useState(15);
+  const [totalN102534, setTotalN102534] = useState(15);
+  const [totalN102542, setTotalN102542] = useState(10);
+  const [totalN102543, setTotalN102543] = useState(15);
+  const [totalN102590, setTotalN102590] = useState(0);
+  const [totalN102592, setTotalN102592] = useState(0);
+  const [totalN102593, setTotalN102593] = useState(20);
+  const [totalN102595, setTotalN102595] = useState(50);
+  const [totalN103101, setTotalN103101] = useState(30);
+  const [totalN104461, setTotalN104461] = useState(30);
+  const [totalN104462, setTotalN104462] = useState(30);
+  const [totalN104463, setTotalN104463] = useState(30);
+  const [totalN104464, setTotalN104464] = useState(80);
+  const [totalN104465, setTotalN104465] = useState(80);
+  const [totalN107101, setTotalN107101] = useState(50);
+  const [totalN108806, setTotalN108806] = useState(100);
+  const [totalN108806Two, setTotalN108806Two] = useState(100);
+  const [totalN108807, setTotalN108807] = useState(100);
+  const [totalN108807Two, setTotalN108807Two] = useState(100);
+  const [totalN108201, setTotalN108201] = useState(75);
+  const [totalN109905, setTotalN109905] = useState(30);
+  const [totalN109917, setTotalN109917] = useState(30);
+  const [totalN109918, setTotalN109918] = useState(30);
+  const [totalN110011, setTotalN110011] = useState(30);
+  const [totalN110021, setTotalN110021] = useState(30);
+  const [totalN111115, setTotalN111115] = useState(30);
+  const [totalN111123, setTotalN111123] = useState(80);
+  const [totalN111101, setTotalN111101] = useState(30);
+  const [totalN111102, setTotalN111102] = useState(30);
+  const [totalN111105, setTotalN111105] = useState(80);
+  const [totalN111106, setTotalN111106] = useState(80);
+  const [totalTvWallmount, setTotalTvWallmount] = useState(55);
+  const [totalSoundbarWallmount, setTotalSoundbarWallmount] = useState(25);
 
 
   return {
@@ -202,6 +204,10 @@ export const useActivationState = () => {
     totalN111105,
     setTotalN111105,
     totalN111106,
-    setTotalN111106
+    setTotalN111106,
+    totalTvWallmount,
+    setTotalTvWallmount,
+    totalSoundbarWallmount,
+    setTotalSoundbarWallmount
   };
 };

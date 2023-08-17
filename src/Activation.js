@@ -123,7 +123,11 @@ function Activation() {
         totalN111105,
         setTotalN111105,
         totalN111106,
-        setTotalN111106
+        setTotalN111106,
+        totalTvWallmount,
+        setTotalTvWallmount,
+        totalSoundbarWallmount,
+        setTotalSoundbarWallmount
     } = useActivationState()
 
     function handleActivationTicket(e) {
@@ -536,7 +540,7 @@ function Activation() {
                     <div class='nested' onChange={(e) => setN111106(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setTvWallmount(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setSoundbarWallmount(e.target.value)}><input class='nested-input'/></div>
-                    
+                    <div>${(n100502 * totalN100502) + (n102501 * totalN102501) + (n102520 * totalN102520) + (n102523 * totalN102523) + (n102526 * totalN102526) + (n102528 * totalN102528) + (n102532 * totalN102532) + (n102534 * totalN102534) + (n102542 * totalN102542) + (n102543 * totalN102543) + (n102590 * totalN102590) + (n102592 * totalN102592) + (n102593 * totalN102593) + (n102595 * totalN102595) + (n103101 * totalN103101) + (n104461 * totalN104461) + (n104462 * totalN104462) + (n104463 * totalN104463) + (n104464 * totalN104464) + (n104465 * totalN104465) + (n107101 * totalN107101) + (n108201 * totalN108201) + (n108806 * totalN108806) + (n108806Two * totalN108806Two) + (n108807 * totalN108807) + (n108807Two * totalN108807Two) + (n109905 * totalN109905) + (n109917 * totalN109917) + (n109918 * totalN109918) + (n110011 * totalN110011) + (n110021 * totalN110021) + (n111101 * totalN111101) + (n111102 * totalN111102) + (n111105 * totalN111105) + (n111106 * totalN111106) + (n111115 * totalN111115) + (n111123 * totalN111123) + (tvWallmount * totalTvWallmount) + (soundbarWallmount * totalSoundbarWallmount)}</div>
                 </form>
             </div>
         </div>

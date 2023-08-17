@@ -45,6 +45,44 @@ export const useActivationState = () => {
   const [n111106, setN111106] = useState('');
   const [tvWallmount, setTvWallmount] = useState('');
   const [soundbarWallmount, setSoundbarWallmount] = useState('');
+  const [totalN100502, setTotalN100502] = useState('');
+  const [totalN102501, setTotalN102501] = useState('');
+  const [totalN102520, setTotalN102520] = useState('');
+  const [totalN102523, setTotalN102523] = useState('');
+  const [totalN102526, setTotalN102526] = useState('');
+  const [totalN102528, setTotalN102528] = useState('');
+  const [totalN102532, setTotalN102532] = useState('');
+  const [totalN102534, setTotalN102534] = useState('');
+  const [totalN102542, setTotalN102542] = useState('');
+  const [totalN102543, setTotalN102543] = useState('');
+  const [totalN102590, setTotalN102590] = useState('');
+  const [totalN102592, setTotalN102592] = useState('');
+  const [totalN102593, setTotalN102593] = useState('');
+  const [totalN102595, setTotalN102595] = useState('');
+  const [totalN103101, setTotalN103101] = useState('');
+  const [totalN104461, setTotalN104461] = useState('');
+  const [totalN104462, setTotalN104462] = useState('');
+  const [totalN104463, setTotalN104463] = useState('');
+  const [totalN104464, setTotalN104464] = useState('');
+  const [totalN104465, setTotalN104465] = useState('');
+  const [totalN107101, setTotalN107101] = useState('');
+  const [totalN108806, setTotalN108806] = useState('');
+  const [totalN108806Two, setTotalN108806Two] = useState('');
+  const [totalN108807, setTotalN108807] = useState('');
+  const [totalN108807Two, setTotalN108807Two] = useState('');
+  const [totalN108201, setTotalN108201] = useState('');
+  const [totalN109905, setTotalN109905] = useState('');
+  const [totalN109917, setTotalN109917] = useState('');
+  const [totalN109918, setTotalN109918] = useState('');
+  const [totalN110011, setTotalN110011] = useState('');
+  const [totalN110021, setTotalN110021] = useState('');
+  const [totalN111115, setTotalN111115] = useState('');
+  const [totalN111123, setTotalN111123] = useState('');
+  const [totalN111101, setTotalN111101] = useState('');
+  const [totalN111102, setTotalN111102] = useState('');
+  const [totalN111105, setTotalN111105] = useState('');
+  const [totalN111106, setTotalN111106] = useState('');
+
 
   return {
     tech, setTech,
@@ -90,6 +128,80 @@ export const useActivationState = () => {
     n111105, setN111105,
     n111106, setN111106,
     tvWallmount, setTvWallmount,
-    soundbarWallmount, setSoundbarWallmount
+    soundbarWallmount, setSoundbarWallmount,
+    totalN100502,
+    setTotalN100502,
+    totalN102501,
+    setTotalN102501,
+    totalN102520,
+    setTotalN102520,
+    totalN102523,
+    setTotalN102523,
+    totalN102526,
+    setTotalN102526,
+    totalN102528,
+    setTotalN102528,
+    totalN102532,
+    setTotalN102532,
+    totalN102534,
+    setTotalN102534,
+    totalN102542,
+    setTotalN102542,
+    totalN102543,
+    setTotalN102543,
+    totalN102590,
+    setTotalN102590,
+    totalN102592,
+    setTotalN102592,
+    totalN102593,
+    setTotalN102593,
+    totalN102595,
+    setTotalN102595,
+    totalN103101,
+    setTotalN103101,
+    totalN104461,
+    setTotalN104461,
+    totalN104462,
+    setTotalN104462,
+    totalN104463,
+    setTotalN104463,
+    totalN104464,
+    setTotalN104464,
+    totalN104465,
+    setTotalN104465,
+    totalN107101,
+    setTotalN107101,
+    totalN108806,
+    setTotalN108806,
+    totalN108806Two,
+    setTotalN108806Two,
+    totalN108807,
+    setTotalN108807,
+    totalN108807Two,
+    setTotalN108807Two,
+    totalN108201,
+    setTotalN108201,
+    totalN109905,
+    setTotalN109905,
+    totalN109917,
+    setTotalN109917,
+    totalN109918,
+    setTotalN109918,
+    totalN110011,
+    setTotalN110011,
+    totalN110021,
+    setTotalN110021,
+    totalN111115,
+    setTotalN111115,
+    totalN111123,
+    setTotalN111123,
+    totalN111101,
+    setTotalN111101,
+    totalN111102,
+    setTotalN111102,
+    totalN111105,
+    setTotalN111105,
+    totalN111106,
+    setTotalN111106
   };
 };

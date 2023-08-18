@@ -18,8 +18,8 @@ function Rough() {
     const [doorContactWire, setDoorContactWire] = useState('')
     const [audioZonePrewire, setAudioZonePrewire] = useState('')
     const [localGlobalAudio, setLocalGlobalAudio] = useState('')
-    const [surround51, setSurround51] = useState('')
-    const [surround71, setSurround71] = useState('')
+    const [surround51Rough, setSurround51Rough] = useState('')
+    const [surround71Rough, setSurround71Rough] = useState('')
     const [CCTVPrewire, setCCTVPrewire] = useState('')
     const [FPPWSameStud , setFPPWSameStud] = useState('')
     const [FPPWSameWall, setFPPWSameWall] = useState('')
@@ -29,6 +29,29 @@ function Rough() {
     const [vacuumOutlet, setVacuumOutlet] = useState('')
     const [pipeAttic, setPipeAttic] = useState('')
     const [pipeLocal, setPipeLocal] = useState('')
+    const totalWireDrop = 15
+    const totalPanelInstall = 25
+    const totalPrewire1 = 30
+    const totalPrewire2 = 45
+    const totalPrewire3 = 60
+    const totalAlarmWire = 15
+    const totalDoorContactWire = 20
+    const totalAudioZonePrewire = 35
+    const totalLocalGlobalAudio = 25
+    const totalSurround51Rough = 75
+    const totalSurround71Rough = 100
+    const totalCCTVPrewire = 20
+    const totalFPPWSameStud = 15
+    const totalFPPWSameWall = 25
+    const totalFPPWSameRoom = 50
+    const totalFPPWRemote = 60
+    const totalAdditionalHDMI = 10 
+    const totalVacuumOutlet = 55
+    const totalPipeAttic = 50
+    const totalPipeLocal = 30
+    const toPayRough = (
+        (wireDrop * totalWireDrop) + (totalPanelInstall * panelInstall) + (totalPrewire1 * prewire1) + (totalPrewire2 * prewire2) + (totalPrewire3 * prewire3) + (totalAlarmWire * alarmWire) + (totalDoorContactWire * doorContactWire) + (totalAudioZonePrewire * audioZonePrewire) + (totalLocalGlobalAudio * localGlobalAudio) + (totalSurround51Rough * surround51Rough) + (totalSurround71Rough * surround71Rough) + (totalCCTVPrewire * CCTVPrewire) + (totalFPPWSameRoom * FPPWSameRoom) + (totalFPPWSameStud * FPPWSameStud) + (totalFPPWSameWall * FPPWSameWall) + (totalFPPWRemote * FPPWRemote) + (totalAdditionalHDMI * additionalHDMI) + (totalVacuumOutlet * vacuumOutlet) + (totalPipeAttic * pipeAttic) + (totalPipeLocal * pipeLocal)
+    )
 
     function handleRoughTicket(e) {
         e.preventDefault()
@@ -54,8 +77,8 @@ function Rough() {
             doorContactWire: doorContactWire !== '' ? doorContactWire : null,
             audioZonePrewire: audioZonePrewire !== '' ? audioZonePrewire : null,
             localGlobalAudio: localGlobalAudio !== '' ? localGlobalAudio : null,
-            surround51: surround51 !== '' ? surround51 : null,
-            surround71: surround71 !== '' ? surround71 : null,
+            surround51: surround51Rough !== '' ? surround51Rough : null,
+            surround71: surround71Rough !== '' ? surround71Rough : null,
             CCTVPrewire: CCTVPrewire !== '' ? CCTVPrewire : null,
             FPPWSameStud: FPPWSameStud !== '' ? FPPWSameStud : null,
             FPPWSameWall: FPPWSameWall !== '' ? FPPWSameWall : null,
@@ -65,6 +88,7 @@ function Rough() {
             vacuumOutlet: vacuumOutlet !== '' ? vacuumOutlet : null,
             pipeAttic: pipeAttic !== '' ? pipeAttic : null,
             pipeLocal: pipeLocal !== '' ? pipeLocal : null,
+            aaToPay: toPayRough
           })
         })
         .then(res => res.json())
@@ -73,7 +97,7 @@ function Rough() {
       
     
     return(
-        <div>
+        <form onSubmit={handleRoughTicket}>
             <div>
                 Job
                 <input onChange={(e) => setJob(e.target.value)}></input>
@@ -187,8 +211,8 @@ function Rough() {
                     <div class='nested' onChange={(e) => setDoorContactWire(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setAudioZonePrewire(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setLocalGlobalAudio(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setSurround51(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setSurround71(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSurround51Rough(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSurround71Rough(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setCCTVPrewire(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setFPPWSameStud(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setFPPWSameWall(e.target.value)}><input class='nested-input'/></div>
@@ -234,8 +258,8 @@ function Rough() {
                     <div class='nested'>${doorContactWire * 20}</div>
                     <div class='nested'>${audioZonePrewire * 35}</div>
                     <div class='nested'>${localGlobalAudio * 25}</div>
-                    <div class='nested'>${surround51 * 75}</div>
-                    <div class='nested'>${surround71 * 100}</div>
+                    <div class='nested'>${surround51Rough * 75}</div>
+                    <div class='nested'>${surround71Rough * 100}</div>
                     <div class='nested'>${CCTVPrewire * 20}</div>
                     <div class='nested'>${FPPWSameStud * 15}</div>
                     <div class='nested'>${FPPWSameWall * 25}</div>
@@ -245,13 +269,13 @@ function Rough() {
                     <div class='nested'>${vacuumOutlet * 55}</div>
                     <div class='nested'>${pipeAttic * 50}</div>
                     <div class='nested'>${pipeLocal * 30}</div>
-                    <div class='nested'>$0</div>
+                    <div class='nested'>${toPayRough}</div>
                 </div>
             </div>
             <div>
-                <button onClick={handleRoughTicket}>Submit</button>
+                <button>Submit</button>
             </div>
-        </div>
+        </form>
     )
 }
 

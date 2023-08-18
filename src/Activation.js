@@ -130,6 +130,10 @@ function Activation() {
         setTotalSoundbarWallmount
     } = useActivationState()
 
+    const toPayActivation = (
+        (n100502 * totalN100502) + (n102501 * totalN102501) + (n102520 * totalN102520) + (n102523 * totalN102523) + (n102526 * totalN102526) + (n102528 * totalN102528) + (n102532 * totalN102532) + (n102534 * totalN102534) + (n102542 * totalN102542) + (n102543 * totalN102543) + (n102590 * totalN102590) + (n102592 * totalN102592) + (n102593 * totalN102593) + (n102595 * totalN102595) + (n103101 * totalN103101) + (n104461 * totalN104461) + (n104462 * totalN104462) + (n104463 * totalN104463) + (n104464 * totalN104464) + (n104465 * totalN104465) + (n107101 * totalN107101) + (n108201 * totalN108201) + (n108806 * totalN108806) + (n108806Two * totalN108806Two) + (n108807 * totalN108807) + (n108807Two * totalN108807Two) + (n109905 * totalN109905) + (n109917 * totalN109917) + (n109918 * totalN109918) + (n110011 * totalN110011) + (n110021 * totalN110021) + (n111101 * totalN111101) + (n111102 * totalN111102) + (n111105 * totalN111105) + (n111106 * totalN111106) + (n111115 * totalN111115) + (n111123 * totalN111123) + (tvWallmount * totalTvWallmount) + (soundbarWallmount * totalSoundbarWallmount)
+    )
+
     function handleActivationTicket(e) {
         e.preventDefault()
         if (tech == '') return null
@@ -182,45 +186,9 @@ function Activation() {
                 n111102: n111102 != '' ? n111102 : null,
                 n111105: n111105 != '' ? n111105 : null,
                 n111106: n111106 != '' ? n111106 : null,
-                totalN100502: totalN100502 !== '' ? totalN100502 : null,
-                totalN102501: totalN102501 !== '' ? totalN102501 : null,
-                totalN102520: totalN102520 !== '' ? totalN102520 : null,
-                totalN102523: totalN102523 !== '' ? totalN102523 : null,
-                totalN102526: totalN102526 !== '' ? totalN102526 : null,
-                totalN102528: totalN102528 !== '' ? totalN102528 : null,
-                totalN102532: totalN102532 !== '' ? totalN102532 : null,
-                totalN102534: totalN102534 !== '' ? totalN102534 : null,
-                totalN102542: totalN102542 !== '' ? totalN102542 : null,
-                totalN102543: totalN102543 !== '' ? totalN102543 : null,
-                totalN102590: totalN102590 !== '' ? totalN102590 : null,
-                totalN102592: totalN102592 !== '' ? totalN102592 : null,
-                totalN102593: totalN102593 !== '' ? totalN102593 : null,
-                totalN102595: totalN102595 !== '' ? totalN102595 : null,
-                totalN103101: totalN103101 !== '' ? totalN103101 : null,
-                totalN104461: totalN104461 !== '' ? totalN104461 : null,
-                totalN104462: totalN104462 !== '' ? totalN104462 : null,
-                totalN104463: totalN104463 !== '' ? totalN104463 : null,
-                totalN104464: totalN104464 !== '' ? totalN104464 : null,
-                totalN104465: totalN104465 !== '' ? totalN104465 : null,
-                totalN107101: totalN107101 !== '' ? totalN107101 : null,
-                totalN108806: totalN108806 !== '' ? totalN108806 : null,
-                totalN108806Two: totalN108806Two !== '' ? totalN108806Two : null,
-                totalN108807: totalN108807 !== '' ? totalN108807 : null,
-                totalN108807Two: totalN108807Two !== '' ? totalN108807Two : null,
-                totalN108201: totalN108201 !== '' ? totalN108201 : null,
-                totalN109905: totalN109905 !== '' ? totalN109905 : null,
-                totalN109917: totalN109917 !== '' ? totalN109917 : null,
-                totalN109918: totalN109918 !== '' ? totalN109918 : null,
-                totalN110011: totalN110011 !== '' ? totalN110011 : null,
-                totalN110021: totalN110021 !== '' ? totalN110021 : null,
-                totalN111115: totalN111115 !== '' ? totalN111115 : null,
-                totalN111123: totalN111123 !== '' ? totalN111123 : null,
-                totalN111101: totalN111101 !== '' ? totalN111101 : null,
-                totalN111102: totalN111102 !== '' ? totalN111102 : null,
-                totalN111105: totalN111105 !== '' ? totalN111105 : null,
-                totalN111106: totalN111106 !== '' ? totalN111106 : null,
                 tvWallmount: tvWallmount != '' ? tvWallmount : null,
-                soundbarWallmount: soundbarWallmount != '' ? soundbarWallmount : null
+                soundbarWallmount: soundbarWallmount != '' ? soundbarWallmount : null,
+                aaToPay: toPayActivation
             })
           })
           .then(res => res.json())
@@ -228,7 +196,7 @@ function Activation() {
     }
 
     return(
-        <div>
+        <form onSubmit={handleActivationTicket}>
             <div>
                 Job
                 <input onChange={(e) => setJob(e.target.value)}></input>
@@ -497,7 +465,7 @@ function Activation() {
                     <div class='nested'>-</div>
                     <div class='nested'>-</div>
                 </div>
-                <form onSubmit={handleActivationTicket} class='nested'>
+                <div class='nested'>
                     <button>Submit</button>
                     TOTAL
                     <div class='nested' onChange={(e) => setN100502(e.target.value)}><input class='nested-input'/></div>
@@ -540,10 +508,10 @@ function Activation() {
                     <div class='nested' onChange={(e) => setN111106(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setTvWallmount(e.target.value)}><input class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setSoundbarWallmount(e.target.value)}><input class='nested-input'/></div>
-                    <div>${(n100502 * totalN100502) + (n102501 * totalN102501) + (n102520 * totalN102520) + (n102523 * totalN102523) + (n102526 * totalN102526) + (n102528 * totalN102528) + (n102532 * totalN102532) + (n102534 * totalN102534) + (n102542 * totalN102542) + (n102543 * totalN102543) + (n102590 * totalN102590) + (n102592 * totalN102592) + (n102593 * totalN102593) + (n102595 * totalN102595) + (n103101 * totalN103101) + (n104461 * totalN104461) + (n104462 * totalN104462) + (n104463 * totalN104463) + (n104464 * totalN104464) + (n104465 * totalN104465) + (n107101 * totalN107101) + (n108201 * totalN108201) + (n108806 * totalN108806) + (n108806Two * totalN108806Two) + (n108807 * totalN108807) + (n108807Two * totalN108807Two) + (n109905 * totalN109905) + (n109917 * totalN109917) + (n109918 * totalN109918) + (n110011 * totalN110011) + (n110021 * totalN110021) + (n111101 * totalN111101) + (n111102 * totalN111102) + (n111105 * totalN111105) + (n111106 * totalN111106) + (n111115 * totalN111115) + (n111123 * totalN111123) + (tvWallmount * totalTvWallmount) + (soundbarWallmount * totalSoundbarWallmount)}</div>
-                </form>
+                    <div>${toPayActivation}</div>
+                </div>
             </div>
-        </div>
+        </form>
     )
 }
 

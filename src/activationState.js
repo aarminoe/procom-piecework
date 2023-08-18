@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 export const useActivationState = () => {
-    const [tech, setTech] = useState('')
-    const [date, setDate] = useState('')
-    const [timeIn, setTimeIn] = useState('')
-    const [timeOut, setTimeOut] = useState('')
-    const [job, setJob] = useState('')
+  const [tech, setTech] = useState('')
+  const [date, setDate] = useState('')
+  const [timeIn, setTimeIn] = useState('')
+  const [timeOut, setTimeOut] = useState('')
+  const [job, setJob] = useState('')
   const [n100502, setN100502] = useState('');
   const [n102501, setN102501] = useState('');
   const [n102520, setN102520] = useState('');

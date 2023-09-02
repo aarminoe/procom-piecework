@@ -6,3 +6,5 @@ TODO:
 -be able to check all jobs from a tech from a pay period (in an admin account)
 -remove inputs from sold sections for now. not important right away
 -make date input a calendar for ease of use
+-add error messages
+-separate login signup page from the rest of the app

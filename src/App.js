@@ -10,9 +10,11 @@ import Activation from './Activation';
 import Login from './Login';
 import { Account } from './Account';
 import SignUp from './SignUp';
+import UserPool from './UserPool';
 
 function App() {
-
+  const user = UserPool.getCurrentUser()
+  console.log(user)
   useEffect(() => {
     fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/dev/jobs')
     .then(res => res.json())
@@ -33,6 +35,8 @@ function App() {
     .then(res => res.json())
     .then(data => console.log(data))
   }
+
+
 
   return (
     <div className="App">

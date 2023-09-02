@@ -102,7 +102,7 @@ function Rough() {
                 Job
                 <input onChange={(e) => setJob(e.target.value)}></input>
                 Date
-                <input onChange={(e) => setDate(e.target.value)} />
+                <input type="date" onChange={(e) => setDate(e.target.value)} />
                 Technician
                 <input onChange={(e) => setTech(e.target.value)}/>
                 Time In

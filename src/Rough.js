@@ -4,6 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 
 function Rough() {
 
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
     const [tech, setTech] = useState('')
     const [timeIn, setTimeIn] = useState('')
     const [date, setDate] = useState('')
@@ -55,7 +57,11 @@ function Rough() {
 
     function handleRoughTicket(e) {
         e.preventDefault()
-        if (tech == '') return "No Tech Found"
+        if (tech == '' || job == '' || date == '') {
+            setError(true)
+            setSuccess(false)
+            return
+        }
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
           method: "POST",
           headers: {
@@ -92,7 +98,34 @@ function Rough() {
           })
         })
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => {
+            console.log(data)
+            setSuccess(true)
+            setError(false)
+            setJob('')
+            setDate('')
+            setTech('')
+            setWireDrop('')
+            setPanelInstall('')
+            setPrewire1('')
+            setPrewire2('')
+            setPrewire3('')
+            setAlarmWire('')
+            setDoorContactWire('')
+            setAudioZonePrewire('')
+            setLocalGlobalAudio('')
+            setSurround51Rough('')
+            setSurround71Rough('')
+            setCCTVPrewire('')
+            setFPPWSameStud('')
+            setFPPWSameWall('')
+            setFPPWSameRoom('')
+            setFPPWRemote('')
+            setAdditionalHDMI('')
+            setVacuumOutlet('')
+            setPipeAttic('')
+            setPipeLocal('')
+        });
     }
       
     
@@ -100,15 +133,15 @@ function Rough() {
         <form onSubmit={handleRoughTicket}>
             <div>
                 Job
-                <input onChange={(e) => setJob(e.target.value)}></input>
+                <input value={job} onChange={(e) => setJob(e.target.value)}></input>
                 Date
-                <input type="date" onChange={(e) => setDate(e.target.value)} />
+                <input value={date} type="date" onChange={(e) => setDate(e.target.value)} />
                 Technician
-                <input onChange={(e) => setTech(e.target.value)}/>
+                <input value={tech} onChange={(e) => setTech(e.target.value)}/>
                 Time In
-                <input onChange={(e) => setTimeIn(e.target.value)}/>
+                <input value={timeIn} onChange={(e) => setTimeIn(e.target.value)}/>
                 Time Out
-                <input onChange={(e) => setTimeOut(e.target.value)}/>
+                <input value={timeOut} onChange={(e) => setTimeOut(e.target.value)}/>
             </div>
 
             <div class="grid-container">
@@ -202,26 +235,26 @@ function Rough() {
                 </div>
                 <div class='nested'>
                     INSTALLED
-                    <div class='nested' onChange={(e) => setWireDrop(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPanelInstall(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPrewire1(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPrewire2(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPrewire3(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setAlarmWire(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setDoorContactWire(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setAudioZonePrewire(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setLocalGlobalAudio(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setSurround51Rough(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setSurround71Rough(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setCCTVPrewire(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setFPPWSameStud(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setFPPWSameWall(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setFPPWSameRoom(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setFPPWRemote(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setAdditionalHDMI(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setVacuumOutlet(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPipeAttic(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setPipeLocal(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setWireDrop(e.target.value)}><input value={wireDrop}class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPanelInstall(e.target.value)}><input value={panelInstall} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPrewire1(e.target.value)}><input value={prewire1}  class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setPrewire2(e.target.value)}><input value={prewire2}class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setPrewire3(e.target.value)}><input value={prewire3}class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setAlarmWire(e.target.value)}><input value={alarmWire}class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setDoorContactWire(e.target.value)}><input value={doorContactWire} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setAudioZonePrewire(e.target.value)}><input value={audioZonePrewire} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setLocalGlobalAudio(e.target.value)}><input value={localGlobalAudio} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSurround51Rough(e.target.value)}><input value={surround51Rough} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setSurround71Rough(e.target.value)}><input value={surround71Rough} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setCCTVPrewire(e.target.value)}><input value={CCTVPrewire} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setFPPWSameStud(e.target.value)}><input value={FPPWSameStud}class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setFPPWSameWall(e.target.value)}><input value={FPPWSameWall} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setFPPWSameRoom(e.target.value)}><input value={FPPWSameRoom}class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setFPPWRemote(e.target.value)}><input value={FPPWRemote}class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setAdditionalHDMI(e.target.value)}><input value={additionalHDMI}class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setVacuumOutlet(e.target.value)}><input value={vacuumOutlet} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setPipeAttic(e.target.value)}><input value={pipeAttic} class='nested-input'/></div>
+                    <div class='nested'  onChange={(e) => setPipeLocal(e.target.value)}><input value={pipeLocal}class='nested-input'/></div>
                 </div>
                 <div class='nested'>
                     COST
@@ -274,6 +307,8 @@ function Rough() {
             </div>
             <div>
                 <button>Submit</button>
+                {error ? <div className="error">Job, Date, or Technician Input Missing</div> : null}
+                {success ? <div className="success">Job Successfully Sent!</div> : null}
             </div>
         </form>
     )

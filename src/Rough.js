@@ -105,6 +105,8 @@ function Rough() {
             setJob('')
             setDate('')
             setTech('')
+            setTimeIn('')
+            setTimeOut('')
             setWireDrop('')
             setPanelInstall('')
             setPrewire1('')

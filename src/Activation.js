@@ -130,13 +130,20 @@ function Activation() {
         setTotalSoundbarWallmount
     } = useActivationState()
 
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
+
     const toPayActivation = (
         (n100502 * totalN100502) + (n102501 * totalN102501) + (n102520 * totalN102520) + (n102523 * totalN102523) + (n102526 * totalN102526) + (n102528 * totalN102528) + (n102532 * totalN102532) + (n102534 * totalN102534) + (n102542 * totalN102542) + (n102543 * totalN102543) + (n102590 * totalN102590) + (n102592 * totalN102592) + (n102593 * totalN102593) + (n102595 * totalN102595) + (n103101 * totalN103101) + (n104461 * totalN104461) + (n104462 * totalN104462) + (n104463 * totalN104463) + (n104464 * totalN104464) + (n104465 * totalN104465) + (n107101 * totalN107101) + (n108201 * totalN108201) + (n108806 * totalN108806) + (n108806Two * totalN108806Two) + (n108807 * totalN108807) + (n108807Two * totalN108807Two) + (n109905 * totalN109905) + (n109917 * totalN109917) + (n109918 * totalN109918) + (n110011 * totalN110011) + (n110021 * totalN110021) + (n111101 * totalN111101) + (n111102 * totalN111102) + (n111105 * totalN111105) + (n111106 * totalN111106) + (n111115 * totalN111115) + (n111123 * totalN111123) + (tvWallmount * totalTvWallmount) + (soundbarWallmount * totalSoundbarWallmount)
     )
 
     function handleActivationTicket(e) {
         e.preventDefault()
-        if (tech == '') return null
+        if (tech == '' || date == '' || job == '') {
+            setError(true)
+            setSuccess(false)
+            return
+        }
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
             method: "POST",
             headers: {
@@ -192,22 +199,70 @@ function Activation() {
             })
           })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => {
+            console.log(data)
+            setSuccess(true)
+            setError(false)
+            setTech('')
+            setDate('')
+            setTimeIn('')
+            setTimeOut('')
+            setJob('')
+            setN100502('')
+            setN102501('')
+            setN102520('')
+            setN102523('')
+            setN102526('')
+            setN102528('')
+            setN102532('')
+            setN102534('')
+            setN102542('')
+            setN102543('')
+            setN102590('')
+            setN102592('')
+            setN102593('')
+            setN102595('')
+            setN103101('')
+            setN104461('')
+            setN104462('')
+            setN104463('')
+            setN104464('')
+            setN104465('')
+            setN107101('')
+            setN108806('')
+            setN108806Two('')
+            setN108807('')
+            setN108807Two('')
+            setN108201('')
+            setN109905('')
+            setN109917('')
+            setN109918('')
+            setN110011('')
+            setN110021('')
+            setN111115('')
+            setN111123('')
+            setN111101('')
+            setN111102('')
+            setN111105('')
+            setN111106('')
+            setTvWallmount('')
+            setSoundbarWallmount('')
+          })
     }
 
     return(
         <form onSubmit={handleActivationTicket}>
             <div>
                 Job
-                <input onChange={(e) => setJob(e.target.value)}></input>
+                <input value={job} onChange={(e) => setJob(e.target.value)}></input>
                 Date
-                <input type="date" onChange={(e) => setDate(e.target.value)} />
+                <input value={date} type="date" onChange={(e) => setDate(e.target.value)} />
                 Technician
-                <input onChange={(e) => setTech(e.target.value)}/>
+                <input value={tech} onChange={(e) => setTech(e.target.value)}/>
                 Time In
-                <input onChange={(e) => setTimeIn(e.target.value)}/>
+                <input value={timeIn} onChange={(e) => setTimeIn(e.target.value)}/>
                 Time Out
-                <input onChange={(e) => setTimeOut(e.target.value)}/>
+                <input value={timeOut} onChange={(e) => setTimeOut(e.target.value)}/>
             </div>
             <div class='grid-container-activ'>
                 <div >
@@ -468,48 +523,52 @@ function Activation() {
                 <div class='nested'>
                     <button>Submit</button>
                     TOTAL
-                    <div class='nested' onChange={(e) => setN100502(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN100502(e.target.value)}>-<input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102501(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102520(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102523(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102526(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102528(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102532(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102534(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102542(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102543(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102590(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102592(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102593(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN102595(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN103101(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN104461(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN104462(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN104463(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN104464(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN104465(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN107101(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN108201(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN108806(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN108806Two(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN108807(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN108807Two(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN109905(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN109917(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN109918(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN110011(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN110021(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111115(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111123(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111101(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111102(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111105(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setN111106(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setTvWallmount(e.target.value)}><input class='nested-input'/></div>
-                    <div class='nested' onChange={(e) => setSoundbarWallmount(e.target.value)}><input class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN100502(e.target.value)}><input value={n100502} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102501(e.target.value)}><input value={n102501} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102520(e.target.value)}><input value={n102520} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102523(e.target.value)}><input value={n102523} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102526(e.target.value)}><input value={n102526} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102528(e.target.value)}><input value={n102528} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102532(e.target.value)}><input value={n102532} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102534(e.target.value)}><input value={n102534} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102542(e.target.value)}><input value={n102542} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102543(e.target.value)}><input value={n102543} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102590(e.target.value)}><input value={n102590} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102592(e.target.value)}><input value={n102592} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102593(e.target.value)}><input value={n102593} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN102595(e.target.value)}><input value={n102595} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN103101(e.target.value)}><input value={n103101} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN104461(e.target.value)}><input value={n104461} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN104462(e.target.value)}><input value={n104462} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN104463(e.target.value)}><input value={n104463} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN104464(e.target.value)}><input value={n104464} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN104465(e.target.value)}><input value={n104465} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN107101(e.target.value)}><input value={n107101} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN108201(e.target.value)}><input value={n108201} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN108806(e.target.value)}><input value={n108806} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN108806Two(e.target.value)}><input value={n108806Two}class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN108807(e.target.value)}><input value={n108807} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN108807Two(e.target.value)}><input value={n108807Two}class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN109905(e.target.value)}><input value={n109905} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN109917(e.target.value)}><input value={n109917} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN109918(e.target.value)}><input value={n109918} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN110011(e.target.value)}><input value={n110011} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN110021(e.target.value)}><input value={n110021} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111115(e.target.value)}><input value={n111115} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111123(e.target.value)}><input value={n111123} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111101(e.target.value)}><input value={n111101} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111102(e.target.value)}><input value={n111102} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111105(e.target.value)}><input value={n111105} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setN111106(e.target.value)}><input value={n111106} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setTvWallmount(e.target.value)}><input value={tvWallmount} class='nested-input'/></div>
+                    <div class='nested' onChange={(e) => setSoundbarWallmount(e.target.value)}><input value={soundbarWallmount}class='nested-input'/></div>
                     <div>${toPayActivation}</div>
                 </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+                {error ? <div className="error">Job, Date, or Technician Input Missing</div> : null}
+                {success ? <div className="success">Job Successfully Sent!</div> : null}
             </div>
         </form>
     )

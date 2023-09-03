@@ -5,7 +5,6 @@ TODO:
 -clean up page
 -be able to check all jobs from a tech from a pay period (in an admin account)
 -remove inputs from sold sections for now. not important right away
--make date input a calendar for ease of use
 -add error messages/success messages to activation and trim (rough already completed)
 -wipe all inputs on submit in activation and trim(rough already completed)
 -separate login signup page from the rest of the app

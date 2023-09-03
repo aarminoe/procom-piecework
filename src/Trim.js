@@ -4,6 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 
 function Trim() {
 
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
     const [tech, setTech] = useState('')
     const [date, setDate] = useState('')
     const [timeIn, setTimeIn] = useState('')
@@ -27,7 +29,7 @@ function Trim() {
     const [surroundPlate, setSurroundPlate] = useState('')
     const [audioKPVC, setAudioKPVC] = useState('')
     const [camInstall, setCamInstall] = useState('')
-    const [nvrDVR, SetNVRDVR] = useState('')
+    const [nvrDVR, setNVRDVR] = useState('')
     const [networkDevice, setNetworkDevice] = useState('')
     const [switch8, setSwitch8] = useState('')
     const [switch16, setSwitch16] = useState('')
@@ -90,7 +92,11 @@ function Trim() {
 
     function handleTrimTicket(e) {
         e.preventDefault()
-        if (tech == '') return "No Tech Found"
+        if (tech == '' || date == '' || job == '') {
+            setError(true)
+            setSuccess(false)
+            return
+        }
         fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
           method: "POST",
           headers: {
@@ -132,7 +138,41 @@ function Trim() {
           })
         })
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => {
+            console.log(data)
+            setSuccess(true)
+            setError(false)
+            setTech('')
+            setDate('')
+            setTimeIn('')
+            setTimeOut('')
+            setJob('')
+            setTermWire('')
+            setBlank('')
+            setPanelTo12('')
+            setPanelTo25('')
+            setPanelTo50('')
+            setDoorContact('')
+            setOtherAlarms('')
+            setAlarmPanel('')
+            setZoneExpander('')
+            setSpkrWBrackets('')
+            setSpkrNoBracket('')
+            setOutdoorSpkr('')
+            setDigitalAudio('')
+            setSurround51('')
+            setSurround71('')
+            setSurroundPlate('')
+            setAudioKPVC('')
+            setCamInstall('')
+            setNVRDVR('')
+            setNetworkDevice('')
+            setSwitch8('')
+            setSwitch16('')
+            setSwitch24('')
+            setVacOutlets('')
+            setVacUnit('')
+        });
     }
       
 
@@ -141,15 +181,15 @@ function Trim() {
         <div>
             <div>
                 Job
-                <input onChange={(e) => setJob(e.target.value)}></input>
+                <input value={job} onChange={(e) => setJob(e.target.value)}></input>
                 Date
-                <input type="date" onChange={(e) => setDate(e.target.value)} />
+                <input value={date} type="date" onChange={(e) => setDate(e.target.value)} />
                 Technician
-                <input onChange={(e) => setTech(e.target.value)}/>
+                <input value={tech} onChange={(e) => setTech(e.target.value)}/>
                 Time In
-                <input onChange={(e) => setTimeIn(e.target.value)}/>
+                <input value={timeIn} onChange={(e) => setTimeIn(e.target.value)}/>
                 Time Out
-                <input onChange={(e) => setTimeOut(e.target.value)}/>
+                <input value={timeOut} onChange={(e) => setTimeOut(e.target.value)}/>
             </div>
 
         <div class='grid-container'>
@@ -264,31 +304,31 @@ function Trim() {
             </div>
             <div class='nested'>
                 INSTALLED
-                <div class='nested' onChange={(e) => setTermWire(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setBlank(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setPanelTo12(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setPanelTo25(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setPanelTo50(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setDoorContact(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setOtherAlarms(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setAlarmPanel(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setZoneExpander(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSpkrWBrackets(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSpkrNoBracket(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setOutdoorSpkr(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setDigitalAudio(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSurround51(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSurround71(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSurroundPlate(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setAudioKPVC(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setCamInstall(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => SetNVRDVR(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setNetworkDevice(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSwitch8(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSwitch16(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setSwitch24(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setVacOutlets(e.target.value)}><input class='nested-input'/></div>
-                <div class='nested' onChange={(e) => setVacUnit(e.target.value)}><input class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setTermWire(e.target.value)}><input value={termWire} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setBlank(e.target.value)}><input value={blank} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo12(e.target.value)}><input value={panelTo12} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo25(e.target.value)}><input value={panelTo25} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setPanelTo50(e.target.value)}><input value={panelTo50} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setDoorContact(e.target.value)}><input value={doorContact} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setOtherAlarms(e.target.value)}><input value={otherAlarms} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setAlarmPanel(e.target.value)}><input value={alarmPanel} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setZoneExpander(e.target.value)}><input value={zoneExpander} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSpkrWBrackets(e.target.value)}><input value={spkrWBrackets} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSpkrNoBracket(e.target.value)}><input value={spkrNoBracket} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setOutdoorSpkr(e.target.value)}><input value={outdoorSpkr} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setDigitalAudio(e.target.value)}><input value={digitalAudio} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurround51(e.target.value)}><input value={surround51} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurround71(e.target.value)}><input value={surround71} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSurroundPlate(e.target.value)}><input value={surroundPlate} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setAudioKPVC(e.target.value)}><input value={audioKPVC} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setCamInstall(e.target.value)}><input value={camInstall} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setNVRDVR(e.target.value)}><input value={nvrDVR} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setNetworkDevice(e.target.value)}><input value={networkDevice} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch8(e.target.value)}><input value={switch8} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch16(e.target.value)}><input value={switch16} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setSwitch24(e.target.value)}><input value={switch24} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setVacOutlets(e.target.value)}><input value={vacOutlets} class='nested-input'/></div>
+                <div class='nested' onChange={(e) => setVacUnit(e.target.value)}><input value={vacUnit} class='nested-input'/></div>
             </div>
             <div class='nested'>
                 COST
@@ -350,6 +390,8 @@ function Trim() {
         </div>
         </div>
         <button>Submit</button>
+        {error ? <div className="error">Job, Date, or Technician Input Missing</div> : null}
+        {success ? <div className="success">Job Successfully Sent!</div> : null}
         </form>
     )
 }

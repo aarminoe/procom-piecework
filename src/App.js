@@ -13,34 +13,19 @@ import SignUp from './SignUp';
 import UserPool from './UserPool';
 
 function App() {
+
+  const [jobList, setJobList] = useState(null)
+
   const user = UserPool.getCurrentUser()
   console.log(user)
   useEffect(() => {
     fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/dev/jobs')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => setJobList(data))
   }, [])
-
-  function handleTest() {
-    fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/jobs', {
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        tech: 'anoe',
-        date: 'One more'
-      })
-    })
-    .then(res => res.json())
-    .then(data => console.log(data))
-  }
-
-
 
   return (
     <div className="App">
-      <button onClick={handleTest}>put</button>
       <h1><NavBar /></h1>
       <Account>
         <Login />
@@ -48,7 +33,7 @@ function App() {
       </Account>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path="/history" element={ <History />}/>
+        <Route path="/history" element={ <History jobList={jobList} />}/>
         <Route path='/rough' element={ <Rough /> }/>
         <Route path='/trim' element={ <Trim />}/>
         <Route path='/activation' element={ <Activation />}/>

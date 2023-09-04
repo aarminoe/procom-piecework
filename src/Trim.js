@@ -134,7 +134,8 @@ function Trim() {
             switch24: switch24 !== '' ? switch24 : null,
             vacOutlets: vacOutlets !== '' ? vacOutlets : null,
             vacUnit: vacUnit !== '' ? vacUnit : null,
-            aaToPay: toPay
+            aaToPay: toPay,
+            aaStage: "trim"
           })
         })
         .then(res => res.json())

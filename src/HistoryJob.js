@@ -15,6 +15,11 @@ function HistoryJob({job}) {
             <div className="nested">
                 <button onClick={() => setShowMore(!showMore)}>Show More</button>
             </div>
+            {showMore ?
+            <div>
+                
+            </div>
+            :null}
         </div>
     )
 }

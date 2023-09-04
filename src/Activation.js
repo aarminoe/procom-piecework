@@ -195,7 +195,8 @@ function Activation() {
                 n111106: n111106 != '' ? n111106 : null,
                 tvWallmount: tvWallmount != '' ? tvWallmount : null,
                 soundbarWallmount: soundbarWallmount != '' ? soundbarWallmount : null,
-                aaToPay: toPayActivation
+                aaToPay: toPayActivation,
+                aaStage: "activation"
             })
           })
           .then(res => res.json())

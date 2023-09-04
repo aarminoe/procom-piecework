@@ -94,7 +94,8 @@ function Rough() {
             vacuumOutlet: vacuumOutlet !== '' ? vacuumOutlet : null,
             pipeAttic: pipeAttic !== '' ? pipeAttic : null,
             pipeLocal: pipeLocal !== '' ? pipeLocal : null,
-            aaToPay: toPayRough
+            aaToPay: toPayRough,
+            aaStage: "rough"
           })
         })
         .then(res => res.json())

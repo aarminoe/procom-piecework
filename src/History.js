@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import HistoryJob from "./HistoryJob";
 
 function History({jobList}) {
 
-    console.log(jobList)
     const [dateFilter, setDateFilter] = useState('')
-
 
     return(
         <div>
@@ -16,12 +15,7 @@ function History({jobList}) {
             {jobList.map((job) => {
                 if (job.date == dateFilter) {
                     return (
-                        <div className="grid-container">
-                            <div className="nested">{job.date}</div>
-                            <div className="nested">{job.aaTech}</div>
-                            <div className="nested">{job.job}</div>
-                            <div className="nested">{job.aaToPay}</div>
-                        </div>
+                        <HistoryJob job={job}/>
                     )
                 }
             })}

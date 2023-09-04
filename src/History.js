@@ -15,7 +15,14 @@ function History({jobList}) {
             </div>
             {jobList.map((job) => {
                 if (job.date == dateFilter) {
-                    return <div>{job.date}</div>
+                    return (
+                        <div className="grid-container">
+                            <div className="nested">{job.date}</div>
+                            <div className="nested">{job.aaTech}</div>
+                            <div className="nested">{job.job}</div>
+                            <div className="nested">{job.aaToPay}</div>
+                        </div>
+                    )
                 }
             })}
         </div>

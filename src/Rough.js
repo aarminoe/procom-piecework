@@ -1,3 +1,4 @@
+import { typeImplementation } from "@testing-library/user-event/dist/type/typeImplementation";
 import React from "react";
 import { useState } from "react";
 const { v4: uuidv4 } = require('uuid');
@@ -57,7 +58,7 @@ function Rough() {
 
     function handleRoughTicket(e) {
         e.preventDefault()
-        if (tech == '' || job == '' || date == '') {
+        if (tech == '' || job == '' || date == '' || toPayRough == 0) {
             setError(true)
             setSuccess(false)
             return
@@ -310,7 +311,7 @@ function Rough() {
             </div>
             <div>
                 <button>Submit</button>
-                {error ? <div className="error">Job, Date, or Technician Input Missing</div> : null}
+                {error ? <div className="error">Job, Date, or Technician Missing</div> : null}
                 {success ? <div className="success">Job Successfully Sent!</div> : null}
             </div>
         </form>

@@ -92,7 +92,7 @@ function Trim() {
 
     function handleTrimTicket(e) {
         e.preventDefault()
-        if (tech == '' || date == '' || job == '') {
+        if (tech == '' || date == '' || job == '' || toPay == 0) {
             setError(true)
             setSuccess(false)
             return

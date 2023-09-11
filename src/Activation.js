@@ -139,7 +139,7 @@ function Activation() {
 
     function handleActivationTicket(e) {
         e.preventDefault()
-        if (tech == '' || date == '' || job == '') {
+        if (tech == '' || date == '' || job == '' || toPayActivation == 0) {
             setError(true)
             setSuccess(false)
             return
@@ -522,7 +522,6 @@ function Activation() {
                     <div class='nested'>-</div>
                 </div>
                 <div class='nested'>
-                    <button>Submit</button>
                     TOTAL
                     <div class='nested' onChange={(e) => setN100502(e.target.value)}><input value={n100502} class='nested-input'/></div>
                     <div class='nested' onChange={(e) => setN102501(e.target.value)}><input value={n102501} class='nested-input'/></div>

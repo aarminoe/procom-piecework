@@ -26,10 +26,10 @@ function History({jobList}) {
                 </div>
             </div>
             {jobList.map((job) => {
-                if (job.date == dateFilter && job.aaTech == techFilter) {
+                if (job.date == dateFilter && job.aaTech.toLowerCase() == techFilter.toLowerCase()) {
                     console.log(job.aaTech)
                     return <HistoryJob job={job}/>
-                } else if (job.aaTech == techFilter && dateFilter == '') {
+                } else if (job.aaTech.toLowerCase() == techFilter.toLowerCase() && dateFilter == '') {
                     return <HistoryJob job={job} />
                 } else if (job.date == dateFilter && techFilter == '') {
                     return <HistoryJob job={job} />

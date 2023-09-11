@@ -10,6 +10,7 @@ function HistoryJob({job}) {
         <div className="grid-container">
             <div className="nested">Date: {job.date}</div>
             <div className="nested">Technician: {job.aaTech}</div>
+            <div className="nested">Stage: {job.aaStage}</div>
             <div className="nested">Job: {job.job}</div>
             <div className="nested">To Pay: ${job.aaToPay}</div>
             <div className="nested">
@@ -17,7 +18,7 @@ function HistoryJob({job}) {
             </div>
             {showMore ?
             <div>
-
+                
             </div>
             :null}
         </div>

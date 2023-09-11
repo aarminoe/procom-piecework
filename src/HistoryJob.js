@@ -4,7 +4,7 @@ import { useState } from "react";
 function HistoryJob({job}) {
 
     const [showMore, setShowMore] = useState(false)
-    console.log(showMore)
+    console.log(job)
 
     return(
         <div className="grid-container">
@@ -17,7 +17,7 @@ function HistoryJob({job}) {
             </div>
             {showMore ?
             <div>
-                
+
             </div>
             :null}
         </div>

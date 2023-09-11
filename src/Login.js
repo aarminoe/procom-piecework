@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AccountContext } from "./Account";
 
-function Login({}) {
+function Login({signedIn, handleSignedIn}) {
     
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
@@ -19,13 +19,14 @@ function Login({}) {
               console.log(email)
               console.log('Logged In!', data)
               handleCheck()
+              handleSignedIn()
           })
           .catch(err => {
               console.error('Failed to login!', err)
               setLoginFailure(true)
           })
     }
-    console.log(email)
+    console.log(signedIn)
   
     
     function handleCheck() {

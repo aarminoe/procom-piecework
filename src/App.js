@@ -15,6 +15,7 @@ import UserPool from './UserPool';
 function App() {
 
   const [jobList, setJobList] = useState(null)
+  const [signedIn, setSignedIn] = useState(false)
 
   const user = UserPool.getCurrentUser()
   console.log(user)
@@ -24,20 +25,27 @@ function App() {
     .then(data => setJobList(data))
   }, [])
 
+  function handleSignedIn() {
+    setSignedIn(!signedIn)
+  }
+
   return (
     <div className="App">
-      <h1><NavBar /></h1>
-      <Account>
-        <Login />
-        <SignUp />
-      </Account>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path="/history" element={ <History jobList={jobList} />}/>
-        <Route path='/rough' element={ <Rough /> }/>
-        <Route path='/trim' element={ <Trim />}/>
-        <Route path='/activation' element={ <Activation />}/>
-      </Routes>
+      {UserPool.getCurrentUser() || signedIn? 
+        <div>   
+        <h1><NavBar /></h1>   
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/history" element={ <History jobList={jobList} />}/>
+          <Route path='/rough' element={ <Rough /> }/>
+          <Route path='/trim' element={ <Trim />}/>
+          <Route path='/activation' element={ <Activation />}/>
+        </Routes>
+        </div> :
+          <Account >
+            <Login signedIn={signedIn} handleSignedIn={handleSignedIn}/>
+            <SignUp signedIn={signedIn}/>
+          </Account>}
     </div>
   );
 }

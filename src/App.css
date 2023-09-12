@@ -73,7 +73,6 @@ body {
   outline: solid;
   outline-width: 1px;
   position: relative;
-  width: ;
 }
 
 .nested-input {
@@ -82,4 +81,20 @@ body {
   box-sizing: border-box;
   line-height: 0;
   vertical-align: top;
+}
+
+.nested-history {
+  outline: solid;
+  outline-width: 1px;
+  position: relative;
+}
+
+.grid-container-history {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+  outline: solid;
+  outline-width: 1px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

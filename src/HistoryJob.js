@@ -7,17 +7,17 @@ function HistoryJob({job}) {
     console.log(job)
 
     return(
-        <div>
+        <div className="history-job-box">
         <div className="grid-container">
             <div className="nested">Date: {job.date}</div>
             <div className="nested">Technician: {job.aaTech}</div>
             <div className="nested">Stage: {job.aaStage}</div>
             <div className="nested">Job: {job.job}</div>
             <div className="nested">To Pay: ${job.aaToPay}</div>
+        </div>
             <div>
                 <button onClick={() => setShowMore(!showMore)}>Show More</button>
             </div>
-        </div>
             {showMore ?
             <div>
                 {job.aaStage == 'rough' ?

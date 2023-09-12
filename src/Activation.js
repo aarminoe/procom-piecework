@@ -150,7 +150,7 @@ function Activation() {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                aaTech: tech,
+                aaTech: tech.toUpperCase(),
                 id: uuidv4(),
                 date: date,
                 time_in: timeIn,

@@ -70,7 +70,7 @@ function Rough() {
           },
           body: JSON.stringify({
             id: uuidv4(),
-            aaTech: tech,
+            aaTech: tech.toUpperCase(),
             date: date,
             time_in: timeIn,
             time_out: timeOut,

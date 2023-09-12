@@ -112,26 +112,26 @@ function HistoryJob({job}) {
                     </div>
                     <div class='nested'>
                         TOTAL
-                        <div class='nested'>1</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
-                        <div class='nested'>2</div>
+                        <div class='nested'>{job.wireDrop ? job.wireDrop : 0}</div>
+                        <div class='nested'>{job.panelInstall ? job.panelInstall : 0}</div>
+                        <div class='nested'>{job.prewire1 ? job.prewire1 : 0}</div>
+                        <div class='nested'>{job.prewire2 ? job.prewire2 : 0}</div>
+                        <div class='nested'>{job.prewire3 ? job.prewire3 : 0}</div>
+                        <div class='nested'>{job.alarmWire ? job.alarmWire : 0}</div>
+                        <div class='nested'>{job.doorContactWire ? job.doorContactWire : 0}</div>
+                        <div class='nested'>{job.audioZonePrewire ? job.audioZonePrewire : 0}</div>
+                        <div class='nested'>{job.localGlobalAudio ? job.localGlobalAudio : 0}</div>
+                        <div class='nested'>{job.surround51 ? job.surround51 : 0}</div>
+                        <div class='nested'>{job.surround71 ? job.surround71 : 0}</div>
+                        <div class='nested'>{job.CCTVPrewire ? job.CCTVPrewire : 0}</div>
+                        <div class='nested'>{job.FPPWSameStud ? job.FPPWSameStud : 0}</div>
+                        <div class='nested'>{job.FPPWSameWall ? job.FPPWSameWall : 0}</div>
+                        <div class='nested'>{job.FPPWSameRoom ? job.FPPWSameRoom : 0}</div>
+                        <div class='nested'>{job.FPPWRemote ? job.FPPWRemote : 0}</div>
+                        <div class='nested'>{job.additionalHDMI ? job.additionalHDMI : 0}</div>
+                        <div class='nested'>{job.vacuumOutlet ? job.vacuumOutlet : 0}</div>
+                        <div class='nested'>{job.pipeAttic ? job.pipeAttic : 0}</div>
+                        <div class='nested'>{job.pipeLocal ? job.pipeLocal : 0}</div>
                     </div>
                 </div>
                 :null}

@@ -7,4 +7,3 @@ TODO:
 -remove inputs from sold sections for now. not important right away
 -delete sign up page? (we should be making all the users ourselves they will just have to sign in)
 -fix bottom of activation page with submit button
--in history do the same thing in activation and trim stages (rough stage already complete)

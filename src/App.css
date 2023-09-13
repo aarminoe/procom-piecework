@@ -104,3 +104,12 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.nav{
+  font-size: small;
+}
+
+.nav:focus {
+  background-color: blue;
+  color: red;
+}

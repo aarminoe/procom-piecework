@@ -106,10 +106,11 @@ body {
 }
 
 .nav{
-  font-size: small;
+  font-size: large;
+  color: black;
 }
 
 .nav:focus {
-  background-color: blue;
-  color: red;
+  background-color: gray;
+  
 }

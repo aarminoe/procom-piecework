@@ -56,8 +56,8 @@ export const useActivationState = () => {
   const [totalN102542, setTotalN102542] = useState(10);
   const [totalN102543, setTotalN102543] = useState(15);
   const [totalN102590, setTotalN102590] = useState(0);
-  const [totalN102592, setTotalN102592] = useState(0);
-  const [totalN102593, setTotalN102593] = useState(20);
+  const [totalN102592, setTotalN102592] = useState(20);
+  const [totalN102593, setTotalN102593] = useState(50);
   const [totalN102595, setTotalN102595] = useState(50);
   const [totalN103101, setTotalN103101] = useState(30);
   const [totalN104461, setTotalN104461] = useState(30);

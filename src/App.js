@@ -20,9 +20,11 @@ function App() {
   const user = UserPool.getCurrentUser()
   console.log(user)
   useEffect(() => {
-    fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/dev/jobs')
-    .then(res => res.json())
-    .then(data => setJobList(data))
+    if (user) {
+      fetch('https://0dgaw8bfm0.execute-api.us-east-2.amazonaws.com/dev/jobs')
+      .then(res => res.json())
+      .then(data => setJobList(data))
+    }
   }, [])
 
   function handleSignedIn() {
@@ -35,7 +37,6 @@ function App() {
         <div>   
         <h1><NavBar /></h1>   
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path="/history" element={ <History jobList={jobList} />}/>
           <Route path='/rough' element={ <Rough /> }/>
           <Route path='/trim' element={ <Trim />}/>

@@ -31,7 +31,7 @@ function SignUp() {
 
     return (
         <div className="App">
-
+           
         <div>
             <form onSubmit={onSubmit}>
             <input value={email} onChange={e => setEmail(e.target.value)}/>

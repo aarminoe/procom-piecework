@@ -39,6 +39,7 @@ function Login({signedIn, handleSignedIn}) {
   
     return (
       <div className="App">
+        <h1>Procom Piece Work</h1>
         <div>
           <form onSubmit={onSubmit}>
             <input value={email} onChange={e => setEmail(e.target.value)}/>
